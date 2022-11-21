@@ -8,6 +8,9 @@ raw_data/
 *.sam
 *.mpileup
 
+# Jellyfish
+*.jf
+
 # Guides
 /Как_вести_журнал.pdf
 /Как_писать_отчёты.pdf
