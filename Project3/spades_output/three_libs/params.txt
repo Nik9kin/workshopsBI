@@ -1,0 +1,50 @@
+Command line: /home/nikitos/Programs/anaconda3/envs/bio_py39/bin/spades.py	--pe1-1	/home/nikitos/Study/BI/Workshop_on_bioinformatics/Project3/raw_data/SRR292678sub_S1_L001_R1_001.fastq	--pe1-2	/home/nikitos/Study/BI/Workshop_on_bioinformatics/Project3/raw_data/SRR292678sub_S1_L001_R2_001.fastq	--mp1-1	/home/nikitos/Study/BI/Workshop_on_bioinformatics/Project3/raw_data/SRR292770_S1_L001_R1_001.fastq	--mp1-2	/home/nikitos/Study/BI/Workshop_on_bioinformatics/Project3/raw_data/SRR292770_S1_L001_R2_001.fastq	--mp2-1	/home/nikitos/Study/BI/Workshop_on_bioinformatics/Project3/raw_data/SRR292862_S2_L001_R1_001.fastq	--mp2-2	/home/nikitos/Study/BI/Workshop_on_bioinformatics/Project3/raw_data/SRR292862_S2_L001_R2_001.fastq	-o	/home/nikitos/Study/BI/Workshop_on_bioinformatics/Project3/spades_output/three_libs	
+
+System information:
+  SPAdes version: 3.13.0
+  Python version: 3.9.15
+  OS: Linux-5.15.0-53-generic-x86_64-with-glibc2.31
+
+Output dir: /home/nikitos/Study/BI/Workshop_on_bioinformatics/Project3/spades_output/three_libs
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Multi-cell mode (you should set '--sc' flag if input data was obtained with MDA (single-cell) technology or --meta flag if processing metagenomic dataset)
+  Reads:
+    Library number: 1, library type: mate-pairs
+      orientation: rf
+      left reads: ['/home/nikitos/Study/BI/Workshop_on_bioinformatics/Project3/raw_data/SRR292770_S1_L001_R1_001.fastq']
+      right reads: ['/home/nikitos/Study/BI/Workshop_on_bioinformatics/Project3/raw_data/SRR292770_S1_L001_R2_001.fastq']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+    Library number: 2, library type: mate-pairs
+      orientation: rf
+      left reads: ['/home/nikitos/Study/BI/Workshop_on_bioinformatics/Project3/raw_data/SRR292862_S2_L001_R1_001.fastq']
+      right reads: ['/home/nikitos/Study/BI/Workshop_on_bioinformatics/Project3/raw_data/SRR292862_S2_L001_R2_001.fastq']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+    Library number: 3, library type: paired-end
+      orientation: fr
+      left reads: ['/home/nikitos/Study/BI/Workshop_on_bioinformatics/Project3/raw_data/SRR292678sub_S1_L001_R1_001.fastq']
+      right reads: ['/home/nikitos/Study/BI/Workshop_on_bioinformatics/Project3/raw_data/SRR292678sub_S1_L001_R2_001.fastq']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed
+Assembly parameters:
+  k: automatic selection based on read length
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+Other parameters:
+  Dir for temp files: /home/nikitos/Study/BI/Workshop_on_bioinformatics/Project3/spades_output/three_libs/tmp
+  Threads: 16
+  Memory limit (in Gb): 15
+
