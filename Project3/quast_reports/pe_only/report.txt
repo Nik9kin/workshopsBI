@@ -1,0 +1,25 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                    contigs   scaffolds
+# contigs (>= 0 bp)         520       502      
+# contigs (>= 1000 bp)      151       147      
+# contigs (>= 5000 bp)      84        83       
+# contigs (>= 10000 bp)     69        67       
+# contigs (>= 25000 bp)     51        51       
+# contigs (>= 50000 bp)     32        33       
+Total length (>= 0 bp)      5315432   5317055  
+Total length (>= 1000 bp)   5204854   5205427  
+Total length (>= 5000 bp)   5039755   5046669  
+Total length (>= 10000 bp)  4936078   4936501  
+Total length (>= 25000 bp)  4640187   4686215  
+Total length (>= 50000 bp)  3936175   4027080  
+# contigs                   205       213      
+Largest contig              300784    300784   
+Total length                5243761   5252701  
+GC (%)                      50.53     50.51    
+N50                         105346    105346   
+N90                         21026     21421    
+auN                         127447.0  128308.8 
+L50                         15        15       
+L90                         55        53       
+# N's per 100 kbp           0.00      32.23    
