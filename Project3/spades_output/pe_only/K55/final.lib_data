@@ -1,0 +1,65 @@
+---
+max read length: 90
+nomerge max read length: 90
+average read length: 89.9999
+average coverage: 72.738
+libraries:       
+    - type:            paired-end
+      orientation:     fr
+      left reads:      
+        - /home/nikitos/Study/BI/Workshop on bioinformatics/Project3/spades_output/pe_only/corrected/SRR292678sub_S1_L001_R1_001.00.0_0.cor.fastq.gz
+      right reads:     
+        - /home/nikitos/Study/BI/Workshop on bioinformatics/Project3/spades_output/pe_only/corrected/SRR292678sub_S1_L001_R2_001.00.0_0.cor.fastq.gz
+      single reads:    
+        - /home/nikitos/Study/BI/Workshop on bioinformatics/Project3/spades_output/pe_only/corrected/SRR292678sub_S1_L001_R_unpaired.00.0_0.cor.fastq.gz
+      data:            
+        unmerged read length: 90
+        merged read length: 0
+        insert size mean: 469.025
+        insert size deviation: 14.6939
+        insert size left quantile: 450
+        insert size right quantile: 486
+        insert size median: 470
+        insert size mad: 8
+        insert size distribution: { 411: 441, 412: 425, 413: 596, 414: 607, 
+                                    415: 694, 416: 812, 417: 888, 418: 1034, 
+                                    419: 1193, 420: 1390, 421: 1625, 422: 1871, 
+                                    423: 2159, 424: 2430, 425: 2743, 426: 3084, 
+                                    427: 3455, 428: 3953, 429: 4298, 430: 4756, 
+                                    431: 5150, 432: 5811, 433: 6322, 434: 6671, 
+                                    435: 7092, 436: 7818, 437: 8287, 438: 9255, 
+                                    439: 9415, 440: 10360, 441: 10519, 
+                                    442: 11488, 443: 12093, 444: 13198, 
+                                    445: 13924, 446: 14743, 447: 16034, 
+                                    448: 16976, 449: 18679, 450: 20122, 
+                                    451: 21973, 452: 23928, 453: 26238, 
+                                    454: 28992, 455: 32200, 456: 35095, 
+                                    457: 38949, 458: 42687, 459: 47069, 
+                                    460: 50807, 461: 55644, 462: 59859, 
+                                    463: 63571, 464: 68226, 465: 71517, 
+                                    466: 74419, 467: 78101, 468: 80253, 
+                                    469: 81896, 470: 82868, 471: 82531, 
+                                    472: 82353, 473: 81434, 474: 79868, 
+                                    475: 77697, 476: 74335, 477: 71311, 
+                                    478: 67714, 479: 63588, 480: 60586, 
+                                    481: 56602, 482: 52354, 483: 48088, 
+                                    484: 44780, 485: 40919, 486: 37420, 
+                                    487: 33910, 488: 30460, 489: 27481, 
+                                    490: 24342, 491: 21575, 492: 19001, 
+                                    493: 16226, 494: 14230, 495: 12386, 
+                                    496: 10432, 497: 8692, 498: 7294, 499: 5977, 
+                                    500: 4865, 501: 4025, 502: 3319, 503: 2569, 
+                                    504: 2204, 505: 1607, 506: 1312, 507: 992, 
+                                    508: 792, 509: 589, 510: 424, 511: 335, 
+                                    512: 234, 513: 178, 514: 117, 515: 97, 
+                                    516: 67, 517: 38, 518: 36, 519: 26, 
+                                    520: 20, 521: 12, 522: 11, 523: 7, 
+                                    524: 2, 525: 3, 526: 2, 527: 3, 528: 2, 
+                                    529: 3 }
+        pi threshold:    0
+        binary converted: true
+        single reads mapped: false
+        library index:   0
+        number of reads: 10998227
+        total nucleotides: 989839707
+...

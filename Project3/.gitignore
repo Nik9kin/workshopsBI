@@ -1,0 +1,9 @@
+# SPAdes
+spades_test/
+tmp/
+configs/
+corrected/
+dataset.info
+input_dataset.yaml
+*.log
+
