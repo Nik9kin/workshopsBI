@@ -1,0 +1,13 @@
+Resistance gene	Identity	Alignment Length/Gene Length	Coverage	Position in reference	Contig	Position in contig	Phenotype	Accession no.
+sul1	100.00	761/840	90.5952380952381	1..761	NODE_9_length_91683_cov_71.979591	10111..10871	Sulphonamide resistance	U12338
+sul1	100.00	761/828	91.90821256038647	1..761	NODE_9_length_91683_cov_71.979591	10111..10871	Sulphonamide resistance	AY522923
+sul2	100.00	816/816	100.0	1..816	NODE_9_length_91683_cov_71.979591	3962..4777	Sulphonamide resistance	HQ840942
+sul1	100.00	761/840	90.5952380952381	1..761	NODE_9_length_91683_cov_71.979591	10111..10871	Sulphonamide resistance	AY115475
+sul1	100.00	761/882	86.28117913832199	1..761	NODE_9_length_91683_cov_71.979591	10111..10871	Sulphonamide resistance	DQ914960
+aph(3'')-Ib	100.00	804/804	100.0	1..804	NODE_9_length_91683_cov_71.979591	3098..3901	Aminoglycoside resistance Alternate name; aph(3'')-Ib	AF321551
+aph(6)-Id	100.00	837/837	100.0	1..837	NODE_9_length_91683_cov_71.979591	2262..3098	Aminoglycoside resistance Alternate name; aph(6)-Id	M28829
+qacE	100.00	282/333	84.68468468468468	1..282	NODE_9_length_91683_cov_71.979591	10931..11212	Disinfectant resistance	X68232
+tet(A)	100.00	1200/1200	100.0	1..1200	NODE_22_length_4054_cov_26.490123	956..2155	Tetracycline resistance	AJ517790
+dfrA7	100.00	474/474	100.0	1..474	NODE_9_length_91683_cov_71.979591	11442..11915	Trimethoprim resistance	AB161450
+blaCTX-M-15	100.00	876/876	100.0	1..876	NODE_8_length_101486_cov_71.819010	81599..82474	Beta-lactam resistance Alternate name; UOE-1	AY044436
+blaTEM-1B	100.00	861/861	100.0	1..861	NODE_8_length_101486_cov_71.819010	85296..86156	Beta-lactam resistance Alternate name; RblaTEM-1	AY458016
