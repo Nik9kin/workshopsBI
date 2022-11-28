@@ -7,3 +7,5 @@ dataset.info
 input_dataset.yaml
 *.log
 
+# Mauve
+*.sslist
