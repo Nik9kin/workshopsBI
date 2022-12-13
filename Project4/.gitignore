@@ -1,0 +1,11 @@
+# BLASTP database
+search_blast/reference.*
+
+# WoLF PSORT htmls
+preds_wolf/*.html
+
+# Diamond
+*diamond*
+
+# Other
+getAnnoFasta.pl
