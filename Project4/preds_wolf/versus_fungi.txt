@@ -1,0 +1,34 @@
+g702.t1 details extr: 26
+g1285.t1 details extr: 24, golg: 2
+g2203.t1 details plas: 9, cyto: 8.5, cyto_nucl: 5, mito: 4, extr: 2, pero: 1, E.R.: 1, golg: 1
+g3428.t1 details cyto: 12.5, cyto_nucl: 11, nucl: 8.5, mito: 5, pero: 1
+g3679.t1 details extr: 26
+g4106.t1 details pero: 10, cyto: 5.5, E.R.: 5, cyto_nucl: 3.5, mito: 3, plas: 3
+g4970.t1 details plas: 16, cyto: 3, nucl: 2, mito: 2, pero: 2, golg: 1, vacu: 1
+g5237.t1 details extr: 10, nucl: 4, plas: 4, mito: 3, cyto: 3, pero: 2, golg: 1
+g5443.t1 details extr: 17, nucl: 5, cyto: 2, mito: 1, E.R.: 1, vacu: 1
+g5467.t1 details extr: 25
+g5502.t1 details extr: 27
+g5503.t1 details extr: 19, mito: 4, golg: 2, pero: 1, E.R.: 1
+g5510.t1 details plas: 21, mito: 3, E.R.: 2, pero: 1
+g5616.t1 details extr: 25
+g5641.t1 details extr: 25
+g5927.t1 details nucl: 22.5, cyto_nucl: 14, cyto: 4.5
+g7861.t1 details nucl: 11, plas: 9, cyto: 4, mito: 2, pero: 1
+g8100.t1 details cyto: 11.5, cyto_nucl: 8.5, mito: 5, nucl: 4.5, pero: 2, plas: 1, E.R.: 1, golg: 1, vacu: 1
+g8312.t1 details nucl: 15.5, cyto_nucl: 12, cyto: 5.5, pero: 5, golg: 1
+g10513.t1 details nucl: 18.5, cyto_nucl: 15, cyto: 6.5, mito: 2
+g10514.t1 details nucl: 20.5, cyto_nucl: 14.5, cyto: 5.5, mito: 1
+g11320.t1 details extr: 27
+g11513.t1 details cyto: 13, cyto_nucl: 9.5, mito: 6, nucl: 4, pero: 2, plas: 1, E.R.: 1
+g11806.t1 details nucl: 18, cyto_nucl: 14, cyto: 6, mito: 3
+g11960.t1 details nucl: 25, cyto_nucl: 15.5
+g12388.t1 details extr: 20, mito: 3, E.R.: 2, cyto: 1, pero: 1
+g12510.t1 details mito: 13, plas: 8, cyto: 5, vacu: 1
+g12562.t1 details extr: 25
+g13530.t1 details extr: 24, nucl: 1, mito: 1, cyto: 1
+g14472.t1 details nucl: 14, cyto_nucl: 11.5, mito: 5, cyto: 5, extr: 1, pero: 1, cysk: 1
+g15153.t1 details extr: 27
+g15484.t1 details nucl: 16.5, cyto_nucl: 12.5, cyto: 7.5, pero: 3
+g16318.t1 details nucl: 17, cyto_nucl: 14, cyto: 7, mito: 1, extr: 1, golg: 1
+g16368.t1 details nucl: 17.5, cyto_nucl: 13.5, cyto: 6.5, mito: 1, extr: 1, golg: 1
