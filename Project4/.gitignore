@@ -1,5 +1,5 @@
 # BLASTP database
-search_blast/reference.*
+filter_blast/reference.*
 
 # WoLF PSORT htmls
 preds_wolf/*.html
