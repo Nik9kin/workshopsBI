@@ -1,0 +1,233 @@
+.resultTable thead th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 46px;
+  z-index: 1;
+}
+
+.resultTable tfoot td {
+  background: rgba(238, 238, 238, .7);
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
+td[data-name] {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 1;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  transition-property: filter, opacity;
+  transition-property: filter, opacity, -webkit-filter;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+td[data-name].error {
+  opacity: 0.5;
+}
+
+td[data-name].resolved {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter></svg>#filter');
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.space-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.xref-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.xref-help {
+  margin: 0;
+}
+
+.xref-help > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.xref-help [data-xref] {
+  padding-top: 0.4em;
+  text-align: center;
+  font-size: 2em;
+  line-height: 0.8em;
+  margin-right: 1em;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: default;
+}
+
+.xref .qtip-content ul {
+  margin-left: 1em;
+  margin-bottom: 0;
+}
+
+.error [data-xref] {
+  cursor: not-allowed;
+}
+
+.resolved [data-xref] {
+  cursor: default;
+}
+
+[data-xref] {
+  font-family: 'EBI-Conceptual';
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  margin: 1px;
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  cursor: progress;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+[data-xref].unavailable {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+[data-xref]:hover, [data-xref]:focus {
+  text-decoration: none;
+  border: 1px solid gray;
+}
+
+[data-xref="Genes, genomes & variation"] {
+  background: #dac79d;
+}
+
+[data-xref="Gene, protein & metabolite expression"] {
+  background: #dab7e2;
+}
+
+[data-xref="Protein sequences, families & motifs"] {
+  background: #62d0df;
+}
+
+[data-xref="Molecular structures"] {
+  background: #d7e5d0;
+}
+
+[data-xref="Chemical biology"] {
+  background: #ffc999;
+}
+
+[data-xref="Systems"] {
+  background: #ffb4aa;
+}
+
+[data-xref="Literature & ontologies"] {
+  background: #a4c7e2;
+}
+
+.taxonomy-visualisation {
+  width: 90%;
+  height: 80vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative
+}
+
+.taxonomy-visualisation.not-loaded::before {
+  opacity: 1;
+}
+
+.taxonomy-visualisation::before {
+  opacity: 0;
+  -webkit-transition: opacity ease-in-out 1s;
+  transition: opacity ease-in-out 1s;
+  top: 20vh;
+  position: absolute;
+  width: 10ch;
+  font-size: large;
+  left: calc(50% - 5ch);
+  text-align: center;
+  content: 'Loading…';
+}
+
+#toggle-fisheye {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5em;
+  padding: 1em;
+  opacity: 0.1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out
+}
+
+#toggle-fisheye:hover, #toggle-fisheye:focus {
+  opacity: 0.5;
+}
+
+#focus-root {
+  height: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #e6e6e6;
+  background: #fefefe;
+  text-align: left
+}
+
+#focus-root > .not-loaded {
+  margin: 0 auto;
+}
+
+#tree-root {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1
+}
+
+#tree-root text {
+  cursor: pointer;
+}

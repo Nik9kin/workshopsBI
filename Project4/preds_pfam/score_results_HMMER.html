@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class=" js flexbox canvas canvastext no-touch rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent applicationcache" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <title>score results | HMMER</title>
+  
+  <meta name="description" content="Biosequence analysis using profile hidden Markov Models using HMMER">
+<meta name="keywords" content="HMMER, hmmer, web server, fast, intuitive, FASTA, protein, sequence, protein sequence database, profile HMM database, databases, search, biosequence, analysis, profile, hidden Markov Models, tool, research, download, free, nucleic, server, interactive, visualisations, domains, domain, graphic, matches, phmmer, hmmscan, hmmsearch, jackhmmer, amino acids, proteomes, taxonomy, UniprotKB, SwissProt, InterPro, Pfam, Gene3D, score, scoring matrix, thresholds, e-value">
+<meta name="author" content="HMMER EMBL-EBI">
+<meta name="theme-color" content="#007699">
+<!-- SP not sure if this is still needed updated to google-site-verification that verify ownership for Google search console -->
+<meta name="google-site-verification" content="GjV+z5lf7mSCShhAOJZh1UW8J+iiCgWmbxIFg2GkG0Q=">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="width">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- SP we can add more meta in the futur e.g. theme-color, ebi:owner etc.-->
+<meta name="coverage" content="Worldwide">
+<meta name="distribution" content="Global">
+<script type="text/javascript" async="" src="score_results_HMMER_files/linkid.js"></script><script async="" src="score_results_HMMER_files/analytics.js"></script><script async="" defer="defer">
+  // google analytics
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  if (!/wwwdev/.test(location.hostname)) {
+    ga('create', 'UA-18998933-1', 'auto');
+    ga('require', 'linkid');
+    ga('send', 'pageview');
+    window.addEventListener('error', function(e) {
+      ga('send', 'exception', {
+        exDescription: (
+          'version 2.41.2; ' + e.filename +
+          ' (' + e.lineno + ':' + e.colno + '): ' + e.message
+        ),
+        exFatal: true
+      });
+    });
+  }
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('https://www.ebi.ac.uk/Tools/hmmer/sw.min.js?rel_2.41.2')
+      .then(console.log.bind(console))
+      .catch(console.error.bind(console));
+    navigator.serviceWorker.ready.then(function() {
+      ga('send', 'event', 'SW', 'ready', '2.41.2');
+    });
+  }
+
+  if (location.href.match(/(\/search|phmmer)$/)) {
+    document.documentElement.classList.add('phmmer');
+  }
+</script>
+<!-- SP we can add more icons links in the futur e.g. apple-touch-->
+<link rel="icon" type="image/x-icon" href="https://www.ebi.ac.uk/Tools/hmmer/static/images/favicon.ico">
+<!-- EBI CSS -->
+<link rel="stylesheet" href="score_results_HMMER_files/foundation.css" type="text/css" media="all">
+<link rel="stylesheet" href="score_results_HMMER_files/ebi-global.css" type="text/css" media="all">
+<link rel="stylesheet" href="score_results_HMMER_files/fonts.css" type="text/css" media="all">
+<!-- <link type="text/css" rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/css/mitigation/develop/ebi-mitigation.css" />
+<link type="text/css" rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/css/mitigation/develop/embl-petrol-colours.css" />-->
+<!-- local CSS -->
+<!-- <link rel="stylesheet" href="https://www.ebi.ac.uk/Tools/hmmer/static/css/theme-hhmer.css" type="text/css" media="all" />-->
+
+<link type="text/css" rel="stylesheet" href="score_results_HMMER_files/main.min.css">
+<link type="text/css" rel="stylesheet" href="score_results_HMMER_files/results.min.css">
+<!--[if lt IE 9 ]>
+  <link rel="stylesheet" type="text/css" href="https://www.ebi.ac.uk/Tools/hmmer/static/css/ie/ie.css?rel_2.41.2" />
+<![endif]-->
+<!-- All JavaScript at the bottom, except for Modernizr -->
+<script src="score_results_HMMER_files/modernizr.custom.49274.js"></script>
+
+
+<meta class="foundation-mq"><style>/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */
+.ql-container {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  height: 100%;
+  margin: 0px;
+  position: relative;
+}
+.ql-container.ql-disabled .ql-tooltip {
+  visibility: hidden;
+}
+.ql-container.ql-disabled .ql-editor ul[data-checked] > li::before {
+  pointer-events: none;
+}
+.ql-clipboard {
+  left: -100000px;
+  height: 1px;
+  overflow-y: hidden;
+  position: absolute;
+  top: 50%;
+}
+.ql-clipboard p {
+  margin: 0;
+  padding: 0;
+}
+.ql-editor {
+  box-sizing: border-box;
+  line-height: 1.42;
+  height: 100%;
+  outline: none;
+  overflow-y: auto;
+  padding: 12px 15px;
+  tab-size: 4;
+  -moz-tab-size: 4;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.ql-editor > * {
+  cursor: text;
+}
+.ql-editor p,
+.ql-editor ol,
+.ql-editor ul,
+.ql-editor pre,
+.ql-editor blockquote,
+.ql-editor h1,
+.ql-editor h2,
+.ql-editor h3,
+.ql-editor h4,
+.ql-editor h5,
+.ql-editor h6 {
+  margin: 0;
+  padding: 0;
+  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+.ql-editor ol,
+.ql-editor ul {
+  padding-left: 1.5em;
+}
+.ql-editor ol > li,
+.ql-editor ul > li {
+  list-style-type: none;
+}
+.ql-editor ul > li::before {
+  content: '\2022';
+}
+.ql-editor ul[data-checked=true],
+.ql-editor ul[data-checked=false] {
+  pointer-events: none;
+}
+.ql-editor ul[data-checked=true] > li *,
+.ql-editor ul[data-checked=false] > li * {
+  pointer-events: all;
+}
+.ql-editor ul[data-checked=true] > li::before,
+.ql-editor ul[data-checked=false] > li::before {
+  color: #777;
+  cursor: pointer;
+  pointer-events: all;
+}
+.ql-editor ul[data-checked=true] > li::before {
+  content: '\2611';
+}
+.ql-editor ul[data-checked=false] > li::before {
+  content: '\2610';
+}
+.ql-editor li::before {
+  display: inline-block;
+  white-space: nowrap;
+  width: 1.2em;
+}
+.ql-editor li:not(.ql-direction-rtl)::before {
+  margin-left: -1.5em;
+  margin-right: 0.3em;
+  text-align: right;
+}
+.ql-editor li.ql-direction-rtl::before {
+  margin-left: 0.3em;
+  margin-right: -1.5em;
+}
+.ql-editor ol li:not(.ql-direction-rtl),
+.ql-editor ul li:not(.ql-direction-rtl) {
+  padding-left: 1.5em;
+}
+.ql-editor ol li.ql-direction-rtl,
+.ql-editor ul li.ql-direction-rtl {
+  padding-right: 1.5em;
+}
+.ql-editor ol li {
+  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  counter-increment: list-0;
+}
+.ql-editor ol li:before {
+  content: counter(list-0, decimal) '. ';
+}
+.ql-editor ol li.ql-indent-1 {
+  counter-increment: list-1;
+}
+.ql-editor ol li.ql-indent-1:before {
+  content: counter(list-1, lower-alpha) '. ';
+}
+.ql-editor ol li.ql-indent-1 {
+  counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-2 {
+  counter-increment: list-2;
+}
+.ql-editor ol li.ql-indent-2:before {
+  content: counter(list-2, lower-roman) '. ';
+}
+.ql-editor ol li.ql-indent-2 {
+  counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-3 {
+  counter-increment: list-3;
+}
+.ql-editor ol li.ql-indent-3:before {
+  content: counter(list-3, decimal) '. ';
+}
+.ql-editor ol li.ql-indent-3 {
+  counter-reset: list-4 list-5 list-6 list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-4 {
+  counter-increment: list-4;
+}
+.ql-editor ol li.ql-indent-4:before {
+  content: counter(list-4, lower-alpha) '. ';
+}
+.ql-editor ol li.ql-indent-4 {
+  counter-reset: list-5 list-6 list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-5 {
+  counter-increment: list-5;
+}
+.ql-editor ol li.ql-indent-5:before {
+  content: counter(list-5, lower-roman) '. ';
+}
+.ql-editor ol li.ql-indent-5 {
+  counter-reset: list-6 list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-6 {
+  counter-increment: list-6;
+}
+.ql-editor ol li.ql-indent-6:before {
+  content: counter(list-6, decimal) '. ';
+}
+.ql-editor ol li.ql-indent-6 {
+  counter-reset: list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-7 {
+  counter-increment: list-7;
+}
+.ql-editor ol li.ql-indent-7:before {
+  content: counter(list-7, lower-alpha) '. ';
+}
+.ql-editor ol li.ql-indent-7 {
+  counter-reset: list-8 list-9;
+}
+.ql-editor ol li.ql-indent-8 {
+  counter-increment: list-8;
+}
+.ql-editor ol li.ql-indent-8:before {
+  content: counter(list-8, lower-roman) '. ';
+}
+.ql-editor ol li.ql-indent-8 {
+  counter-reset: list-9;
+}
+.ql-editor ol li.ql-indent-9 {
+  counter-increment: list-9;
+}
+.ql-editor ol li.ql-indent-9:before {
+  content: counter(list-9, decimal) '. ';
+}
+.ql-editor .ql-indent-1:not(.ql-direction-rtl) {
+  padding-left: 3em;
+}
+.ql-editor li.ql-indent-1:not(.ql-direction-rtl) {
+  padding-left: 4.5em;
+}
+.ql-editor .ql-indent-1.ql-direction-rtl.ql-align-right {
+  padding-right: 3em;
+}
+.ql-editor li.ql-indent-1.ql-direction-rtl.ql-align-right {
+  padding-right: 4.5em;
+}
+.ql-editor .ql-indent-2:not(.ql-direction-rtl) {
+  padding-left: 6em;
+}
+.ql-editor li.ql-indent-2:not(.ql-direction-rtl) {
+  padding-left: 7.5em;
+}
+.ql-editor .ql-indent-2.ql-direction-rtl.ql-align-right {
+  padding-right: 6em;
+}
+.ql-editor li.ql-indent-2.ql-direction-rtl.ql-align-right {
+  padding-right: 7.5em;
+}
+.ql-editor .ql-indent-3:not(.ql-direction-rtl) {
+  padding-left: 9em;
+}
+.ql-editor li.ql-indent-3:not(.ql-direction-rtl) {
+  padding-left: 10.5em;
+}
+.ql-editor .ql-indent-3.ql-direction-rtl.ql-align-right {
+  padding-right: 9em;
+}
+.ql-editor li.ql-indent-3.ql-direction-rtl.ql-align-right {
+  padding-right: 10.5em;
+}
+.ql-editor .ql-indent-4:not(.ql-direction-rtl) {
+  padding-left: 12em;
+}
+.ql-editor li.ql-indent-4:not(.ql-direction-rtl) {
+  padding-left: 13.5em;
+}
+.ql-editor .ql-indent-4.ql-direction-rtl.ql-align-right {
+  padding-right: 12em;
+}
+.ql-editor li.ql-indent-4.ql-direction-rtl.ql-align-right {
+  padding-right: 13.5em;
+}
+.ql-editor .ql-indent-5:not(.ql-direction-rtl) {
+  padding-left: 15em;
+}
+.ql-editor li.ql-indent-5:not(.ql-direction-rtl) {
+  padding-left: 16.5em;
+}
+.ql-editor .ql-indent-5.ql-direction-rtl.ql-align-right {
+  padding-right: 15em;
+}
+.ql-editor li.ql-indent-5.ql-direction-rtl.ql-align-right {
+  padding-right: 16.5em;
+}
+.ql-editor .ql-indent-6:not(.ql-direction-rtl) {
+  padding-left: 18em;
+}
+.ql-editor li.ql-indent-6:not(.ql-direction-rtl) {
+  padding-left: 19.5em;
+}
+.ql-editor .ql-indent-6.ql-direction-rtl.ql-align-right {
+  padding-right: 18em;
+}
+.ql-editor li.ql-indent-6.ql-direction-rtl.ql-align-right {
+  padding-right: 19.5em;
+}
+.ql-editor .ql-indent-7:not(.ql-direction-rtl) {
+  padding-left: 21em;
+}
+.ql-editor li.ql-indent-7:not(.ql-direction-rtl) {
+  padding-left: 22.5em;
+}
+.ql-editor .ql-indent-7.ql-direction-rtl.ql-align-right {
+  padding-right: 21em;
+}
+.ql-editor li.ql-indent-7.ql-direction-rtl.ql-align-right {
+  padding-right: 22.5em;
+}
+.ql-editor .ql-indent-8:not(.ql-direction-rtl) {
+  padding-left: 24em;
+}
+.ql-editor li.ql-indent-8:not(.ql-direction-rtl) {
+  padding-left: 25.5em;
+}
+.ql-editor .ql-indent-8.ql-direction-rtl.ql-align-right {
+  padding-right: 24em;
+}
+.ql-editor li.ql-indent-8.ql-direction-rtl.ql-align-right {
+  padding-right: 25.5em;
+}
+.ql-editor .ql-indent-9:not(.ql-direction-rtl) {
+  padding-left: 27em;
+}
+.ql-editor li.ql-indent-9:not(.ql-direction-rtl) {
+  padding-left: 28.5em;
+}
+.ql-editor .ql-indent-9.ql-direction-rtl.ql-align-right {
+  padding-right: 27em;
+}
+.ql-editor li.ql-indent-9.ql-direction-rtl.ql-align-right {
+  padding-right: 28.5em;
+}
+.ql-editor .ql-video {
+  display: block;
+  max-width: 100%;
+}
+.ql-editor .ql-video.ql-align-center {
+  margin: 0 auto;
+}
+.ql-editor .ql-video.ql-align-right {
+  margin: 0 0 0 auto;
+}
+.ql-editor .ql-bg-black {
+  background-color: #000;
+}
+.ql-editor .ql-bg-red {
+  background-color: #e60000;
+}
+.ql-editor .ql-bg-orange {
+  background-color: #f90;
+}
+.ql-editor .ql-bg-yellow {
+  background-color: #ff0;
+}
+.ql-editor .ql-bg-green {
+  background-color: #008a00;
+}
+.ql-editor .ql-bg-blue {
+  background-color: #06c;
+}
+.ql-editor .ql-bg-purple {
+  background-color: #93f;
+}
+.ql-editor .ql-color-white {
+  color: #fff;
+}
+.ql-editor .ql-color-red {
+  color: #e60000;
+}
+.ql-editor .ql-color-orange {
+  color: #f90;
+}
+.ql-editor .ql-color-yellow {
+  color: #ff0;
+}
+.ql-editor .ql-color-green {
+  color: #008a00;
+}
+.ql-editor .ql-color-blue {
+  color: #06c;
+}
+.ql-editor .ql-color-purple {
+  color: #93f;
+}
+.ql-editor .ql-font-serif {
+  font-family: Georgia, Times New Roman, serif;
+}
+.ql-editor .ql-font-monospace {
+  font-family: Monaco, Courier New, monospace;
+}
+.ql-editor .ql-size-small {
+  font-size: 0.75em;
+}
+.ql-editor .ql-size-large {
+  font-size: 1.5em;
+}
+.ql-editor .ql-size-huge {
+  font-size: 2.5em;
+}
+.ql-editor .ql-direction-rtl {
+  direction: rtl;
+  text-align: inherit;
+}
+.ql-editor .ql-align-center {
+  text-align: center;
+}
+.ql-editor .ql-align-justify {
+  text-align: justify;
+}
+.ql-editor .ql-align-right {
+  text-align: right;
+}
+.ql-editor.ql-blank::before {
+  color: rgba(0,0,0,0.6);
+  content: attr(data-placeholder);
+  font-style: italic;
+  left: 15px;
+  pointer-events: none;
+  position: absolute;
+  right: 15px;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uLi8uLi9ub2RlX21vZHVsZXMvcXVpbGwvZGlzdC9xdWlsbC5jb3JlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7RUFLRTtBQUNGO0VBQ0Usc0JBQXNCO0VBQ3RCLHlDQUF5QztFQUN6QyxlQUFlO0VBQ2YsWUFBWTtFQUNaLFdBQVc7RUFDWCxrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0Usb0JBQW9CO0FBQ3RCO0FBQ0E7RUFDRSxlQUFlO0VBQ2YsV0FBVztFQUNYLGtCQUFrQjtFQUNsQixrQkFBa0I7RUFDbEIsUUFBUTtBQUNWO0FBQ0E7RUFDRSxTQUFTO0VBQ1QsVUFBVTtBQUNaO0FBQ0E7RUFDRSxzQkFBc0I7RUFDdEIsaUJBQWlCO0VBQ2pCLFlBQVk7RUFDWixhQUFhO0VBQ2IsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixXQUFXO0VBQ1gsZ0JBQWdCO0VBQ2hCLGdCQUFnQjtFQUNoQixxQkFBcUI7RUFDckIscUJBQXFCO0FBQ3ZCO0FBQ0E7RUFDRSxZQUFZO0FBQ2Q7QUFDQTs7Ozs7Ozs7Ozs7RUFXRSxTQUFTO0VBQ1QsVUFBVTtFQUNWLDZFQUE2RTtBQUMvRTtBQUNBOztFQUVFLG1CQUFtQjtBQUNyQjtBQUNBOztFQUVFLHFCQUFxQjtBQUN2QjtBQUNBO0VBQ0UsZ0JBQWdCO0FBQ2xCO0FBQ0E7O0VBRUUsb0JBQW9CO0FBQ3RCO0FBQ0E7O0VBRUUsbUJBQW1CO0FBQ3JCO0FBQ0E7O0VBRUUsV0FBVztFQUNYLGVBQWU7RUFDZixtQkFBbUI7QUFDckI7QUFDQTtFQUNFLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0UsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSxxQkFBcUI7RUFDckIsbUJBQW1CO0VBQ25CLFlBQVk7QUFDZDtBQUNBO0VBQ0UsbUJBQW1CO0VBQ25CLG1CQUFtQjtFQUNuQixpQkFBaUI7QUFDbkI7QUFDQTtFQUNFLGtCQUFrQjtFQUNsQixvQkFBb0I7QUFDdEI7QUFDQTs7RUFFRSxtQkFBbUI7QUFDckI7QUFDQTs7RUFFRSxvQkFBb0I7QUFDdEI7QUFDQTtFQUNFLDZFQUE2RTtFQUM3RSx5QkFBeUI7QUFDM0I7QUFDQTtFQUNFLHNDQUFzQztBQUN4QztBQUNBO0VBQ0UseUJBQXlCO0FBQzNCO0FBQ0E7RUFDRSwwQ0FBMEM7QUFDNUM7QUFDQTtFQUNFLHNFQUFzRTtBQUN4RTtBQUNBO0VBQ0UseUJBQXlCO0FBQzNCO0FBQ0E7RUFDRSwwQ0FBMEM7QUFDNUM7QUFDQTtFQUNFLCtEQUErRDtBQUNqRTtBQUNBO0VBQ0UseUJBQXlCO0FBQzNCO0FBQ0E7RUFDRSxzQ0FBc0M7QUFDeEM7QUFDQTtFQUNFLHdEQUF3RDtBQUMxRDtBQUNBO0VBQ0UseUJBQXlCO0FBQzNCO0FBQ0E7RUFDRSwwQ0FBMEM7QUFDNUM7QUFDQTtFQUNFLGlEQUFpRDtBQUNuRDtBQUNBO0VBQ0UseUJBQXlCO0FBQzNCO0FBQ0E7RUFDRSwwQ0FBMEM7QUFDNUM7QUFDQTtFQUNFLDBDQUEwQztBQUM1QztBQUNBO0VBQ0UseUJBQXlCO0FBQzNCO0FBQ0E7RUFDRSxzQ0FBc0M7QUFDeEM7QUFDQTtFQUNFLG1DQUFtQztBQUNyQztBQUNBO0VBQ0UseUJBQXlCO0FBQzNCO0FBQ0E7RUFDRSwwQ0FBMEM7QUFDNUM7QUFDQTtFQUNFLDRCQUE0QjtBQUM5QjtBQUNBO0VBQ0UseUJBQXlCO0FBQzNCO0FBQ0E7RUFDRSwwQ0FBMEM7QUFDNUM7QUFDQTtFQUNFLHFCQUFxQjtBQUN2QjtBQUNBO0VBQ0UseUJBQXlCO0FBQzNCO0FBQ0E7RUFDRSxzQ0FBc0M7QUFDeEM7QUFDQTtFQUNFLGlCQUFpQjtBQUNuQjtBQUNBO0VBQ0UsbUJBQW1CO0FBQ3JCO0FBQ0E7RUFDRSxrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLG9CQUFvQjtBQUN0QjtBQUNBO0VBQ0UsaUJBQWlCO0FBQ25CO0FBQ0E7RUFDRSxtQkFBbUI7QUFDckI7QUFDQTtFQUNFLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0Usb0JBQW9CO0FBQ3RCO0FBQ0E7RUFDRSxpQkFBaUI7QUFDbkI7QUFDQTtFQUNFLG9CQUFvQjtBQUN0QjtBQUNBO0VBQ0Usa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSxxQkFBcUI7QUFDdkI7QUFDQTtFQUNFLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0Usb0JBQW9CO0FBQ3RCO0FBQ0E7RUFDRSxtQkFBbUI7QUFDckI7QUFDQTtFQUNFLHFCQUFxQjtBQUN2QjtBQUNBO0VBQ0Usa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSxvQkFBb0I7QUFDdEI7QUFDQTtFQUNFLG1CQUFtQjtBQUNyQjtBQUNBO0VBQ0UscUJBQXFCO0FBQ3ZCO0FBQ0E7RUFDRSxrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLG9CQUFvQjtBQUN0QjtBQUNBO0VBQ0UsbUJBQW1CO0FBQ3JCO0FBQ0E7RUFDRSxxQkFBcUI7QUFDdkI7QUFDQTtFQUNFLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0Usb0JBQW9CO0FBQ3RCO0FBQ0E7RUFDRSxtQkFBbUI7QUFDckI7QUFDQTtFQUNFLHFCQUFxQjtBQUN2QjtBQUNBO0VBQ0Usa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSxvQkFBb0I7QUFDdEI7QUFDQTtFQUNFLG1CQUFtQjtBQUNyQjtBQUNBO0VBQ0UscUJBQXFCO0FBQ3ZCO0FBQ0E7RUFDRSxrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLG9CQUFvQjtBQUN0QjtBQUNBO0VBQ0UsbUJBQW1CO0FBQ3JCO0FBQ0E7RUFDRSxxQkFBcUI7QUFDdkI7QUFDQTtFQUNFLGNBQWM7RUFDZCxlQUFlO0FBQ2pCO0FBQ0E7RUFDRSxjQUFjO0FBQ2hCO0FBQ0E7RUFDRSxrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLHNCQUFzQjtBQUN4QjtBQUNBO0VBQ0UseUJBQXlCO0FBQzNCO0FBQ0E7RUFDRSxzQkFBc0I7QUFDeEI7QUFDQTtFQUNFLHNCQUFzQjtBQUN4QjtBQUNBO0VBQ0UseUJBQXlCO0FBQzNCO0FBQ0E7RUFDRSxzQkFBc0I7QUFDeEI7QUFDQTtFQUNFLHNCQUFzQjtBQUN4QjtBQUNBO0VBQ0UsV0FBVztBQUNiO0FBQ0E7RUFDRSxjQUFjO0FBQ2hCO0FBQ0E7RUFDRSxXQUFXO0FBQ2I7QUFDQTtFQUNFLFdBQVc7QUFDYjtBQUNBO0VBQ0UsY0FBYztBQUNoQjtBQUNBO0VBQ0UsV0FBVztBQUNiO0FBQ0E7RUFDRSxXQUFXO0FBQ2I7QUFDQTtFQUNFLDRDQUE0QztBQUM5QztBQUNBO0VBQ0UsMkNBQTJDO0FBQzdDO0FBQ0E7RUFDRSxpQkFBaUI7QUFDbkI7QUFDQTtFQUNFLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0UsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSxjQUFjO0VBQ2QsbUJBQW1CO0FBQ3JCO0FBQ0E7RUFDRSxrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLG1CQUFtQjtBQUNyQjtBQUNBO0VBQ0UsaUJBQWlCO0FBQ25CO0FBQ0E7RUFDRSxzQkFBc0I7RUFDdEIsK0JBQStCO0VBQy9CLGtCQUFrQjtFQUNsQixVQUFVO0VBQ1Ysb0JBQW9CO0VBQ3BCLGtCQUFrQjtFQUNsQixXQUFXO0FBQ2IiLCJzb3VyY2VzQ29udGVudCI6WyIvKiFcbiAqIFF1aWxsIEVkaXRvciB2MS4zLjdcbiAqIGh0dHBzOi8vcXVpbGxqcy5jb20vXG4gKiBDb3B5cmlnaHQgKGMpIDIwMTQsIEphc29uIENoZW5cbiAqIENvcHlyaWdodCAoYykgMjAxMywgc2FsZXNmb3JjZS5jb21cbiAqL1xuLnFsLWNvbnRhaW5lciB7XG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4gIGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmO1xuICBmb250LXNpemU6IDEzcHg7XG4gIGhlaWdodDogMTAwJTtcbiAgbWFyZ2luOiAwcHg7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cbi5xbC1jb250YWluZXIucWwtZGlzYWJsZWQgLnFsLXRvb2x0aXAge1xuICB2aXNpYmlsaXR5OiBoaWRkZW47XG59XG4ucWwtY29udGFpbmVyLnFsLWRpc2FibGVkIC5xbC1lZGl0b3IgdWxbZGF0YS1jaGVja2VkXSA+IGxpOjpiZWZvcmUge1xuICBwb2ludGVyLWV2ZW50czogbm9uZTtcbn1cbi5xbC1jbGlwYm9hcmQge1xuICBsZWZ0OiAtMTAwMDAwcHg7XG4gIGhlaWdodDogMXB4O1xuICBvdmVyZmxvdy15OiBoaWRkZW47XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiA1MCU7XG59XG4ucWwtY2xpcGJvYXJkIHAge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG59XG4ucWwtZWRpdG9yIHtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgbGluZS1oZWlnaHQ6IDEuNDI7XG4gIGhlaWdodDogMTAwJTtcbiAgb3V0bGluZTogbm9uZTtcbiAgb3ZlcmZsb3cteTogYXV0bztcbiAgcGFkZGluZzogMTJweCAxNXB4O1xuICB0YWItc2l6ZTogNDtcbiAgLW1vei10YWItc2l6ZTogNDtcbiAgdGV4dC1hbGlnbjogbGVmdDtcbiAgd2hpdGUtc3BhY2U6IHByZS13cmFwO1xuICB3b3JkLXdyYXA6IGJyZWFrLXdvcmQ7XG59XG4ucWwtZWRpdG9yID4gKiB7XG4gIGN1cnNvcjogdGV4dDtcbn1cbi5xbC1lZGl0b3IgcCxcbi5xbC1lZGl0b3Igb2wsXG4ucWwtZWRpdG9yIHVsLFxuLnFsLWVkaXRvciBwcmUsXG4ucWwtZWRpdG9yIGJsb2NrcXVvdGUsXG4ucWwtZWRpdG9yIGgxLFxuLnFsLWVkaXRvciBoMixcbi5xbC1lZGl0b3IgaDMsXG4ucWwtZWRpdG9yIGg0LFxuLnFsLWVkaXRvciBoNSxcbi5xbC1lZGl0b3IgaDYge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG4gIGNvdW50ZXItcmVzZXQ6IGxpc3QtMSBsaXN0LTIgbGlzdC0zIGxpc3QtNCBsaXN0LTUgbGlzdC02IGxpc3QtNyBsaXN0LTggbGlzdC05O1xufVxuLnFsLWVkaXRvciBvbCxcbi5xbC1lZGl0b3IgdWwge1xuICBwYWRkaW5nLWxlZnQ6IDEuNWVtO1xufVxuLnFsLWVkaXRvciBvbCA+IGxpLFxuLnFsLWVkaXRvciB1bCA+IGxpIHtcbiAgbGlzdC1zdHlsZS10eXBlOiBub25lO1xufVxuLnFsLWVkaXRvciB1bCA+IGxpOjpiZWZvcmUge1xuICBjb250ZW50OiAnXFwyMDIyJztcbn1cbi5xbC1lZGl0b3IgdWxbZGF0YS1jaGVja2VkPXRydWVdLFxuLnFsLWVkaXRvciB1bFtkYXRhLWNoZWNrZWQ9ZmFsc2VdIHtcbiAgcG9pbnRlci1ldmVudHM6IG5vbmU7XG59XG4ucWwtZWRpdG9yIHVsW2RhdGEtY2hlY2tlZD10cnVlXSA+IGxpICosXG4ucWwtZWRpdG9yIHVsW2RhdGEtY2hlY2tlZD1mYWxzZV0gPiBsaSAqIHtcbiAgcG9pbnRlci1ldmVudHM6IGFsbDtcbn1cbi5xbC1lZGl0b3IgdWxbZGF0YS1jaGVja2VkPXRydWVdID4gbGk6OmJlZm9yZSxcbi5xbC1lZGl0b3IgdWxbZGF0YS1jaGVja2VkPWZhbHNlXSA+IGxpOjpiZWZvcmUge1xuICBjb2xvcjogIzc3NztcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBwb2ludGVyLWV2ZW50czogYWxsO1xufVxuLnFsLWVkaXRvciB1bFtkYXRhLWNoZWNrZWQ9dHJ1ZV0gPiBsaTo6YmVmb3JlIHtcbiAgY29udGVudDogJ1xcMjYxMSc7XG59XG4ucWwtZWRpdG9yIHVsW2RhdGEtY2hlY2tlZD1mYWxzZV0gPiBsaTo6YmVmb3JlIHtcbiAgY29udGVudDogJ1xcMjYxMCc7XG59XG4ucWwtZWRpdG9yIGxpOjpiZWZvcmUge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gIHdpZHRoOiAxLjJlbTtcbn1cbi5xbC1lZGl0b3IgbGk6bm90KC5xbC1kaXJlY3Rpb24tcnRsKTo6YmVmb3JlIHtcbiAgbWFyZ2luLWxlZnQ6IC0xLjVlbTtcbiAgbWFyZ2luLXJpZ2h0OiAwLjNlbTtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XG59XG4ucWwtZWRpdG9yIGxpLnFsLWRpcmVjdGlvbi1ydGw6OmJlZm9yZSB7XG4gIG1hcmdpbi1sZWZ0OiAwLjNlbTtcbiAgbWFyZ2luLXJpZ2h0OiAtMS41ZW07XG59XG4ucWwtZWRpdG9yIG9sIGxpOm5vdCgucWwtZGlyZWN0aW9uLXJ0bCksXG4ucWwtZWRpdG9yIHVsIGxpOm5vdCgucWwtZGlyZWN0aW9uLXJ0bCkge1xuICBwYWRkaW5nLWxlZnQ6IDEuNWVtO1xufVxuLnFsLWVkaXRvciBvbCBsaS5xbC1kaXJlY3Rpb24tcnRsLFxuLnFsLWVkaXRvciB1bCBsaS5xbC1kaXJlY3Rpb24tcnRsIHtcbiAgcGFkZGluZy1yaWdodDogMS41ZW07XG59XG4ucWwtZWRpdG9yIG9sIGxpIHtcbiAgY291bnRlci1yZXNldDogbGlzdC0xIGxpc3QtMiBsaXN0LTMgbGlzdC00IGxpc3QtNSBsaXN0LTYgbGlzdC03IGxpc3QtOCBsaXN0LTk7XG4gIGNvdW50ZXItaW5jcmVtZW50OiBsaXN0LTA7XG59XG4ucWwtZWRpdG9yIG9sIGxpOmJlZm9yZSB7XG4gIGNvbnRlbnQ6IGNvdW50ZXIobGlzdC0wLCBkZWNpbWFsKSAnLiAnO1xufVxuLnFsLWVkaXRvciBvbCBsaS5xbC1pbmRlbnQtMSB7XG4gIGNvdW50ZXItaW5jcmVtZW50OiBsaXN0LTE7XG59XG4ucWwtZWRpdG9yIG9sIGxpLnFsLWluZGVudC0xOmJlZm9yZSB7XG4gIGNvbnRlbnQ6IGNvdW50ZXIobGlzdC0xLCBsb3dlci1hbHBoYSkgJy4gJztcbn1cbi5xbC1lZGl0b3Igb2wgbGkucWwtaW5kZW50LTEge1xuICBjb3VudGVyLXJlc2V0OiBsaXN0LTIgbGlzdC0zIGxpc3QtNCBsaXN0LTUgbGlzdC02IGxpc3QtNyBsaXN0LTggbGlzdC05O1xufVxuLnFsLWVkaXRvciBvbCBsaS5xbC1pbmRlbnQtMiB7XG4gIGNvdW50ZXItaW5jcmVtZW50OiBsaXN0LTI7XG59XG4ucWwtZWRpdG9yIG9sIGxpLnFsLWluZGVudC0yOmJlZm9yZSB7XG4gIGNvbnRlbnQ6IGNvdW50ZXIobGlzdC0yLCBsb3dlci1yb21hbikgJy4gJztcbn1cbi5xbC1lZGl0b3Igb2wgbGkucWwtaW5kZW50LTIge1xuICBjb3VudGVyLXJlc2V0OiBsaXN0LTMgbGlzdC00IGxpc3QtNSBsaXN0LTYgbGlzdC03IGxpc3QtOCBsaXN0LTk7XG59XG4ucWwtZWRpdG9yIG9sIGxpLnFsLWluZGVudC0zIHtcbiAgY291bnRlci1pbmNyZW1lbnQ6IGxpc3QtMztcbn1cbi5xbC1lZGl0b3Igb2wgbGkucWwtaW5kZW50LTM6YmVmb3JlIHtcbiAgY29udGVudDogY291bnRlcihsaXN0LTMsIGRlY2ltYWwpICcuICc7XG59XG4ucWwtZWRpdG9yIG9sIGxpLnFsLWluZGVudC0zIHtcbiAgY291bnRlci1yZXNldDogbGlzdC00IGxpc3QtNSBsaXN0LTYgbGlzdC03IGxpc3QtOCBsaXN0LTk7XG59XG4ucWwtZWRpdG9yIG9sIGxpLnFsLWluZGVudC00IHtcbiAgY291bnRlci1pbmNyZW1lbnQ6IGxpc3QtNDtcbn1cbi5xbC1lZGl0b3Igb2wgbGkucWwtaW5kZW50LTQ6YmVmb3JlIHtcbiAgY29udGVudDogY291bnRlcihsaXN0LTQsIGxvd2VyLWFscGhhKSAnLiAnO1xufVxuLnFsLWVkaXRvciBvbCBsaS5xbC1pbmRlbnQtNCB7XG4gIGNvdW50ZXItcmVzZXQ6IGxpc3QtNSBsaXN0LTYgbGlzdC03IGxpc3QtOCBsaXN0LTk7XG59XG4ucWwtZWRpdG9yIG9sIGxpLnFsLWluZGVudC01IHtcbiAgY291bnRlci1pbmNyZW1lbnQ6IGxpc3QtNTtcbn1cbi5xbC1lZGl0b3Igb2wgbGkucWwtaW5kZW50LTU6YmVmb3JlIHtcbiAgY29udGVudDogY291bnRlcihsaXN0LTUsIGxvd2VyLXJvbWFuKSAnLiAnO1xufVxuLnFsLWVkaXRvciBvbCBsaS5xbC1pbmRlbnQtNSB7XG4gIGNvdW50ZXItcmVzZXQ6IGxpc3QtNiBsaXN0LTcgbGlzdC04IGxpc3QtOTtcbn1cbi5xbC1lZGl0b3Igb2wgbGkucWwtaW5kZW50LTYge1xuICBjb3VudGVyLWluY3JlbWVudDogbGlzdC02O1xufVxuLnFsLWVkaXRvciBvbCBsaS5xbC1pbmRlbnQtNjpiZWZvcmUge1xuICBjb250ZW50OiBjb3VudGVyKGxpc3QtNiwgZGVjaW1hbCkgJy4gJztcbn1cbi5xbC1lZGl0b3Igb2wgbGkucWwtaW5kZW50LTYge1xuICBjb3VudGVyLXJlc2V0OiBsaXN0LTcgbGlzdC04IGxpc3QtOTtcbn1cbi5xbC1lZGl0b3Igb2wgbGkucWwtaW5kZW50LTcge1xuICBjb3VudGVyLWluY3JlbWVudDogbGlzdC03O1xufVxuLnFsLWVkaXRvciBvbCBsaS5xbC1pbmRlbnQtNzpiZWZvcmUge1xuICBjb250ZW50OiBjb3VudGVyKGxpc3QtNywgbG93ZXItYWxwaGEpICcuICc7XG59XG4ucWwtZWRpdG9yIG9sIGxpLnFsLWluZGVudC03IHtcbiAgY291bnRlci1yZXNldDogbGlzdC04IGxpc3QtOTtcbn1cbi5xbC1lZGl0b3Igb2wgbGkucWwtaW5kZW50LTgge1xuICBjb3VudGVyLWluY3JlbWVudDogbGlzdC04O1xufVxuLnFsLWVkaXRvciBvbCBsaS5xbC1pbmRlbnQtODpiZWZvcmUge1xuICBjb250ZW50OiBjb3VudGVyKGxpc3QtOCwgbG93ZXItcm9tYW4pICcuICc7XG59XG4ucWwtZWRpdG9yIG9sIGxpLnFsLWluZGVudC04IHtcbiAgY291bnRlci1yZXNldDogbGlzdC05O1xufVxuLnFsLWVkaXRvciBvbCBsaS5xbC1pbmRlbnQtOSB7XG4gIGNvdW50ZXItaW5jcmVtZW50OiBsaXN0LTk7XG59XG4ucWwtZWRpdG9yIG9sIGxpLnFsLWluZGVudC05OmJlZm9yZSB7XG4gIGNvbnRlbnQ6IGNvdW50ZXIobGlzdC05LCBkZWNpbWFsKSAnLiAnO1xufVxuLnFsLWVkaXRvciAucWwtaW5kZW50LTE6bm90KC5xbC1kaXJlY3Rpb24tcnRsKSB7XG4gIHBhZGRpbmctbGVmdDogM2VtO1xufVxuLnFsLWVkaXRvciBsaS5xbC1pbmRlbnQtMTpub3QoLnFsLWRpcmVjdGlvbi1ydGwpIHtcbiAgcGFkZGluZy1sZWZ0OiA0LjVlbTtcbn1cbi5xbC1lZGl0b3IgLnFsLWluZGVudC0xLnFsLWRpcmVjdGlvbi1ydGwucWwtYWxpZ24tcmlnaHQge1xuICBwYWRkaW5nLXJpZ2h0OiAzZW07XG59XG4ucWwtZWRpdG9yIGxpLnFsLWluZGVudC0xLnFsLWRpcmVjdGlvbi1ydGwucWwtYWxpZ24tcmlnaHQge1xuICBwYWRkaW5nLXJpZ2h0OiA0LjVlbTtcbn1cbi5xbC1lZGl0b3IgLnFsLWluZGVudC0yOm5vdCgucWwtZGlyZWN0aW9uLXJ0bCkge1xuICBwYWRkaW5nLWxlZnQ6IDZlbTtcbn1cbi5xbC1lZGl0b3IgbGkucWwtaW5kZW50LTI6bm90KC5xbC1kaXJlY3Rpb24tcnRsKSB7XG4gIHBhZGRpbmctbGVmdDogNy41ZW07XG59XG4ucWwtZWRpdG9yIC5xbC1pbmRlbnQtMi5xbC1kaXJlY3Rpb24tcnRsLnFsLWFsaWduLXJpZ2h0IHtcbiAgcGFkZGluZy1yaWdodDogNmVtO1xufVxuLnFsLWVkaXRvciBsaS5xbC1pbmRlbnQtMi5xbC1kaXJlY3Rpb24tcnRsLnFsLWFsaWduLXJpZ2h0IHtcbiAgcGFkZGluZy1yaWdodDogNy41ZW07XG59XG4ucWwtZWRpdG9yIC5xbC1pbmRlbnQtMzpub3QoLnFsLWRpcmVjdGlvbi1ydGwpIHtcbiAgcGFkZGluZy1sZWZ0OiA5ZW07XG59XG4ucWwtZWRpdG9yIGxpLnFsLWluZGVudC0zOm5vdCgucWwtZGlyZWN0aW9uLXJ0bCkge1xuICBwYWRkaW5nLWxlZnQ6IDEwLjVlbTtcbn1cbi5xbC1lZGl0b3IgLnFsLWluZGVudC0zLnFsLWRpcmVjdGlvbi1ydGwucWwtYWxpZ24tcmlnaHQge1xuICBwYWRkaW5nLXJpZ2h0OiA5ZW07XG59XG4ucWwtZWRpdG9yIGxpLnFsLWluZGVudC0zLnFsLWRpcmVjdGlvbi1ydGwucWwtYWxpZ24tcmlnaHQge1xuICBwYWRkaW5nLXJpZ2h0OiAxMC41ZW07XG59XG4ucWwtZWRpdG9yIC5xbC1pbmRlbnQtNDpub3QoLnFsLWRpcmVjdGlvbi1ydGwpIHtcbiAgcGFkZGluZy1sZWZ0OiAxMmVtO1xufVxuLnFsLWVkaXRvciBsaS5xbC1pbmRlbnQtNDpub3QoLnFsLWRpcmVjdGlvbi1ydGwpIHtcbiAgcGFkZGluZy1sZWZ0OiAxMy41ZW07XG59XG4ucWwtZWRpdG9yIC5xbC1pbmRlbnQtNC5xbC1kaXJlY3Rpb24tcnRsLnFsLWFsaWduLXJpZ2h0IHtcbiAgcGFkZGluZy1yaWdodDogMTJlbTtcbn1cbi5xbC1lZGl0b3IgbGkucWwtaW5kZW50LTQucWwtZGlyZWN0aW9uLXJ0bC5xbC1hbGlnbi1yaWdodCB7XG4gIHBhZGRpbmctcmlnaHQ6IDEzLjVlbTtcbn1cbi5xbC1lZGl0b3IgLnFsLWluZGVudC01Om5vdCgucWwtZGlyZWN0aW9uLXJ0bCkge1xuICBwYWRkaW5nLWxlZnQ6IDE1ZW07XG59XG4ucWwtZWRpdG9yIGxpLnFsLWluZGVudC01Om5vdCgucWwtZGlyZWN0aW9uLXJ0bCkge1xuICBwYWRkaW5nLWxlZnQ6IDE2LjVlbTtcbn1cbi5xbC1lZGl0b3IgLnFsLWluZGVudC01LnFsLWRpcmVjdGlvbi1ydGwucWwtYWxpZ24tcmlnaHQge1xuICBwYWRkaW5nLXJpZ2h0OiAxNWVtO1xufVxuLnFsLWVkaXRvciBsaS5xbC1pbmRlbnQtNS5xbC1kaXJlY3Rpb24tcnRsLnFsLWFsaWduLXJpZ2h0IHtcbiAgcGFkZGluZy1yaWdodDogMTYuNWVtO1xufVxuLnFsLWVkaXRvciAucWwtaW5kZW50LTY6bm90KC5xbC1kaXJlY3Rpb24tcnRsKSB7XG4gIHBhZGRpbmctbGVmdDogMThlbTtcbn1cbi5xbC1lZGl0b3IgbGkucWwtaW5kZW50LTY6bm90KC5xbC1kaXJlY3Rpb24tcnRsKSB7XG4gIHBhZGRpbmctbGVmdDogMTkuNWVtO1xufVxuLnFsLWVkaXRvciAucWwtaW5kZW50LTYucWwtZGlyZWN0aW9uLXJ0bC5xbC1hbGlnbi1yaWdodCB7XG4gIHBhZGRpbmctcmlnaHQ6IDE4ZW07XG59XG4ucWwtZWRpdG9yIGxpLnFsLWluZGVudC02LnFsLWRpcmVjdGlvbi1ydGwucWwtYWxpZ24tcmlnaHQge1xuICBwYWRkaW5nLXJpZ2h0OiAxOS41ZW07XG59XG4ucWwtZWRpdG9yIC5xbC1pbmRlbnQtNzpub3QoLnFsLWRpcmVjdGlvbi1ydGwpIHtcbiAgcGFkZGluZy1sZWZ0OiAyMWVtO1xufVxuLnFsLWVkaXRvciBsaS5xbC1pbmRlbnQtNzpub3QoLnFsLWRpcmVjdGlvbi1ydGwpIHtcbiAgcGFkZGluZy1sZWZ0OiAyMi41ZW07XG59XG4ucWwtZWRpdG9yIC5xbC1pbmRlbnQtNy5xbC1kaXJlY3Rpb24tcnRsLnFsLWFsaWduLXJpZ2h0IHtcbiAgcGFkZGluZy1yaWdodDogMjFlbTtcbn1cbi5xbC1lZGl0b3IgbGkucWwtaW5kZW50LTcucWwtZGlyZWN0aW9uLXJ0bC5xbC1hbGlnbi1yaWdodCB7XG4gIHBhZGRpbmctcmlnaHQ6IDIyLjVlbTtcbn1cbi5xbC1lZGl0b3IgLnFsLWluZGVudC04Om5vdCgucWwtZGlyZWN0aW9uLXJ0bCkge1xuICBwYWRkaW5nLWxlZnQ6IDI0ZW07XG59XG4ucWwtZWRpdG9yIGxpLnFsLWluZGVudC04Om5vdCgucWwtZGlyZWN0aW9uLXJ0bCkge1xuICBwYWRkaW5nLWxlZnQ6IDI1LjVlbTtcbn1cbi5xbC1lZGl0b3IgLnFsLWluZGVudC04LnFsLWRpcmVjdGlvbi1ydGwucWwtYWxpZ24tcmlnaHQge1xuICBwYWRkaW5nLXJpZ2h0OiAyNGVtO1xufVxuLnFsLWVkaXRvciBsaS5xbC1pbmRlbnQtOC5xbC1kaXJlY3Rpb24tcnRsLnFsLWFsaWduLXJpZ2h0IHtcbiAgcGFkZGluZy1yaWdodDogMjUuNWVtO1xufVxuLnFsLWVkaXRvciAucWwtaW5kZW50LTk6bm90KC5xbC1kaXJlY3Rpb24tcnRsKSB7XG4gIHBhZGRpbmctbGVmdDogMjdlbTtcbn1cbi5xbC1lZGl0b3IgbGkucWwtaW5kZW50LTk6bm90KC5xbC1kaXJlY3Rpb24tcnRsKSB7XG4gIHBhZGRpbmctbGVmdDogMjguNWVtO1xufVxuLnFsLWVkaXRvciAucWwtaW5kZW50LTkucWwtZGlyZWN0aW9uLXJ0bC5xbC1hbGlnbi1yaWdodCB7XG4gIHBhZGRpbmctcmlnaHQ6IDI3ZW07XG59XG4ucWwtZWRpdG9yIGxpLnFsLWluZGVudC05LnFsLWRpcmVjdGlvbi1ydGwucWwtYWxpZ24tcmlnaHQge1xuICBwYWRkaW5nLXJpZ2h0OiAyOC41ZW07XG59XG4ucWwtZWRpdG9yIC5xbC12aWRlbyB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBtYXgtd2lkdGg6IDEwMCU7XG59XG4ucWwtZWRpdG9yIC5xbC12aWRlby5xbC1hbGlnbi1jZW50ZXIge1xuICBtYXJnaW46IDAgYXV0bztcbn1cbi5xbC1lZGl0b3IgLnFsLXZpZGVvLnFsLWFsaWduLXJpZ2h0IHtcbiAgbWFyZ2luOiAwIDAgMCBhdXRvO1xufVxuLnFsLWVkaXRvciAucWwtYmctYmxhY2sge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDAwO1xufVxuLnFsLWVkaXRvciAucWwtYmctcmVkIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2U2MDAwMDtcbn1cbi5xbC1lZGl0b3IgLnFsLWJnLW9yYW5nZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmOTA7XG59XG4ucWwtZWRpdG9yIC5xbC1iZy15ZWxsb3cge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmYwO1xufVxuLnFsLWVkaXRvciAucWwtYmctZ3JlZW4ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDA4YTAwO1xufVxuLnFsLWVkaXRvciAucWwtYmctYmx1ZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwNmM7XG59XG4ucWwtZWRpdG9yIC5xbC1iZy1wdXJwbGUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjOTNmO1xufVxuLnFsLWVkaXRvciAucWwtY29sb3Itd2hpdGUge1xuICBjb2xvcjogI2ZmZjtcbn1cbi5xbC1lZGl0b3IgLnFsLWNvbG9yLXJlZCB7XG4gIGNvbG9yOiAjZTYwMDAwO1xufVxuLnFsLWVkaXRvciAucWwtY29sb3Itb3JhbmdlIHtcbiAgY29sb3I6ICNmOTA7XG59XG4ucWwtZWRpdG9yIC5xbC1jb2xvci15ZWxsb3cge1xuICBjb2xvcjogI2ZmMDtcbn1cbi5xbC1lZGl0b3IgLnFsLWNvbG9yLWdyZWVuIHtcbiAgY29sb3I6ICMwMDhhMDA7XG59XG4ucWwtZWRpdG9yIC5xbC1jb2xvci1ibHVlIHtcbiAgY29sb3I6ICMwNmM7XG59XG4ucWwtZWRpdG9yIC5xbC1jb2xvci1wdXJwbGUge1xuICBjb2xvcjogIzkzZjtcbn1cbi5xbC1lZGl0b3IgLnFsLWZvbnQtc2VyaWYge1xuICBmb250LWZhbWlseTogR2VvcmdpYSwgVGltZXMgTmV3IFJvbWFuLCBzZXJpZjtcbn1cbi5xbC1lZGl0b3IgLnFsLWZvbnQtbW9ub3NwYWNlIHtcbiAgZm9udC1mYW1pbHk6IE1vbmFjbywgQ291cmllciBOZXcsIG1vbm9zcGFjZTtcbn1cbi5xbC1lZGl0b3IgLnFsLXNpemUtc21hbGwge1xuICBmb250LXNpemU6IDAuNzVlbTtcbn1cbi5xbC1lZGl0b3IgLnFsLXNpemUtbGFyZ2Uge1xuICBmb250LXNpemU6IDEuNWVtO1xufVxuLnFsLWVkaXRvciAucWwtc2l6ZS1odWdlIHtcbiAgZm9udC1zaXplOiAyLjVlbTtcbn1cbi5xbC1lZGl0b3IgLnFsLWRpcmVjdGlvbi1ydGwge1xuICBkaXJlY3Rpb246IHJ0bDtcbiAgdGV4dC1hbGlnbjogaW5oZXJpdDtcbn1cbi5xbC1lZGl0b3IgLnFsLWFsaWduLWNlbnRlciB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbi5xbC1lZGl0b3IgLnFsLWFsaWduLWp1c3RpZnkge1xuICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xufVxuLnFsLWVkaXRvciAucWwtYWxpZ24tcmlnaHQge1xuICB0ZXh0LWFsaWduOiByaWdodDtcbn1cbi5xbC1lZGl0b3IucWwtYmxhbms6OmJlZm9yZSB7XG4gIGNvbG9yOiByZ2JhKDAsMCwwLDAuNik7XG4gIGNvbnRlbnQ6IGF0dHIoZGF0YS1wbGFjZWhvbGRlcik7XG4gIGZvbnQtc3R5bGU6IGl0YWxpYztcbiAgbGVmdDogMTVweDtcbiAgcG9pbnRlci1ldmVudHM6IG5vbmU7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgcmlnaHQ6IDE1cHg7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><script src="score_results_HMMER_files/5_ebiFrameworkNotificationBanner.js"></script><script src="score_results_HMMER_files/5_ebiFrameworkNotificationBanner.js"></script></head>
+<body style="padding-bottom: 99px;" data-new-gr-c-s-check-loaded="8.904.0" data-gr-ext-installed="" class="with-release-info">
+    <script type="application/ld+json">
+  {
+    "@context": [
+  "http://schema.org",
+  {
+    "ProteinAnnotation": {
+      "@id": "http://semanticscience.org/resource/SIO_010471.rdf"
+    },
+    "Protein": {
+      "@id": "http://purl.obolibrary.org/obo/PR_000000001"
+    },
+    "Structure": {
+      "@id": "http://semanticscience.org/resource/SIO_011119.rdf"
+    }
+  },
+  {
+    "@base": "http://schema.org"
+  }
+]
+,
+    "@type": "WebSite",
+    "url": "https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E/score",
+    "potentialAction": {
+      "@context": "http://schema.org",
+      "@type": "SearchAction",
+      "target": "https://www.ebi.ac.uk/Tools/hmmer/search/phmmer?seq={search_sequence}",
+      "query-input": "required name=search_sequence"
+    },
+    "citation": {
+      "@type": ["Article", "ScholarlyArticle"],
+      "@id": "https://www.ebi.ac.uk/Tools/hmmer/#citation"
+    },
+    "sourceOrganization": {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "sourceOrganization",
+      "name": "HMMER",
+      "url": "https://www.ebi.ac.uk/Tools/hmmer/",
+      "logo": "https://www.ebi.ac.uk/Tools/hmmer/static/images/hmmer_logo_notext.png",
+      "sameAs": [
+        "https://twitter.com/hmm3r"
+      ]
+    },
+    "mainEntity": {
+      "@id": "mainEntity"
+    }
+  }
+</script>
+
+    <!-- accessibility code to help auto-reader-->
+    <div id="skip-to">
+        <ul>
+            <li><a href="#content">Skip to main content</a></li>
+            <li><a href="#local-nav">Skip to local navigation</a></li>
+            <li><a href="#global-nav">Skip to EBI global navigation menu</a></li>
+            <li><a href="#global-nav-expanded">Skip to expanded EBI global navigation menu (includes all sub-sections)</a></li>
+        </ul>
+    </div>
+
+
+    <div data-sticky-container="" class="sticky-container" style="height: 329.033px;">
+        <div id="local-masthead" data-sticky="hnlopv-sticky" data-sticky-on="large" data-top-anchor="220" data-btm-anchor="300000" class="sticky is-anchored is-at-top" data-resize="local-masthead" style="max-width: 1465.6px; margin-top: 0px; top: 0px; bottom: auto;">
+            <header>
+
+                <div id="global-masthead" class="clearfix">
+                    <a href="https://www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><span class="ebi-logo"></span></a>
+
+                        <nav>
+                        <div class="row">
+                            <ul id="global-nav" class="menu">
+                                <li id="home-mobile" class=""><a href="https://www.ebi.ac.uk/" aria-label="EMBL-EBI home"></a></li>
+                                <li id="home"><a href="https://www.ebi.ac.uk/"><i class="icon icon-generic" data-icon="H"></i> EMBL-EBI</a></li>
+                                <li id="services" class="active"><a href="https://www.ebi.ac.uk/services"><i class="icon icon-generic" data-icon="("></i> Services</a></li>
+                                <li id="research"><a href="https://www.ebi.ac.uk/research"><i class="icon icon-generic" data-icon=")"></i> Research</a></li>
+                                <li id="training"><a href="https://www.ebi.ac.uk/training"><i class="icon icon-generic" data-icon="t"></i> Training</a></li>
+                                <li id="about"><a href="https://www.ebi.ac.uk/about"><i class="icon icon-generic" data-icon="i"></i> About us</a></li>
+                                <li id="search">
+                                    <a href="#" data-toggle="search-global-dropdown" aria-controls="search-global-dropdown" data-is-focus="false" data-yeti-box="search-global-dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon icon-functional" data-icon="1"></i> <span class="show-for-small-only">Search</span></a>
+                                    <div id="search-global-dropdown" class="dropdown-pane" data-dropdown="dfv0yu-dropdown" data-options="closeOnClick:true;" aria-hidden="true" data-yeti-box="search-global-dropdown" data-resize="search-global-dropdown" aria-labelledby="z20wc8-dd-anchor"><form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET" class="large-8 large-push-2"><fieldset><div class="input-group"><input type="text" name="query" id="global-searchbox" class="input-group-field" placeholder="Search all of EMBL-EBI"><div class="input-group-button"><input type="submit" name="submit" value="Search" class="button"><input type="hidden" name="db" value="allebi" checked="checked"><input type="hidden" name="requestFrom" value="global-masthead" checked="checked"></div></div></fieldset> </form></div>
+                                </li>
+                                <li class="float-right show-for-medium embl-selector">
+                                    <button class="button float-right" type="button" data-toggle="embl-dropdown" aria-controls="embl-dropdown" data-is-focus="false" data-yeti-box="embl-dropdown" aria-haspopup="true" aria-expanded="false">Hinxton</button>
+                                    <!-- The dropdown menu will be programatically added by script.js -->
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                <div><div id="embl-dropdown" class="embl-dropdown dropdown-pane bottom" data-dropdown="er2o6i-dropdown" aria-hidden="true" data-yeti-box="embl-dropdown" data-resize="embl-dropdown" aria-labelledby="ky5a33-dd-anchor"><p>EMBL-EBI in Hinxton, Cambridge is one of six<br> EMBL locations across europe.<br> <a href="https://www.ebi.ac.uk/about" class="small readmore">More about EMBL-EBI</a></p><h6>Connect to another EMBL location</h6><div class="small-collapse padding-bottom-large clearfix"><div class="columns small-5 padding-bottom-medium"><a href="http://www.embl.de/">Heidelberg</a><div class="small">Main laboratory</div></div><div class="columns small-7 padding-bottom-medium"><a href="http://www.embl.es/">Barcelona</a><div class="small">Tissue biology and disease modelling</div></div><div class="columns small-5 padding-bottom-medium"><a href="http://www.embl.fr/">Grenoble</a><div class="small">Structural biology</div></div><div class="columns small-7 padding-bottom-medium"><a href="http://www.embl-hamburg.de/">Hamburg</a><div class="small">Structural biology</div></div><div class="columns small-5 padding-bottom-medium"><a href="http://www.embl.it/">Rome</a><div class="small">Epigenetics and neurobiology</div></div><div class="columns small-7 padding-bottom-medium"><a href="http://embl.org/" class="readmore">More about EMBL</a></div></div></div></div></div><!-- /global-masthead -->
+
+                <div class="masthead row">
+
+                    <!-- local-title -->
+                    <div class="columns medium-12" id="local-title">
+                        <h1>
+                            <a href="https://www.ebi.ac.uk/Tools/hmmer/" title="Back to HMMER homepage">
+                                <img id="hmmerLogo" src="score_results_HMMER_files/hmmer_logo_notext.png" alt="HMMER logo">
+                                HMMER
+                            </a>
+                        </h1>
+                        <h4>Biosequence analysis using profile hidden Markov Models</h4>
+                    </div>
+                    <!-- /local-title -->
+
+                    <!-- local-nav -->
+                    <nav>
+                        <ul class="dropdown menu float-left" id="local-nav" data-description="navigational" data-dropdown-menu="e5bvlr-dropdown-menu" role="menubar">
+                            <li class="" role="menuitem"><a href="https://www.ebi.ac.uk/Tools/hmmer/" tabindex="0">Home</a></li>
+                            <li class="" role="menuitem"><a href="https://www.ebi.ac.uk/Tools/hmmer/search">Search</a></li>
+                            <li class="active" role="menuitem"><a href="https://www.ebi.ac.uk/Tools/hmmer/results">Results</a></li>
+                            <li role="menuitem"><a href="http://hmmer.org/download.html">Software</a></li>
+                            <li class="" role="menuitem"><a href="https://www.ebi.ac.uk/Tools/hmmer/help">Help</a></li>
+                            <li class="" role="menuitem"><a href="https://www.ebi.ac.uk/Tools/hmmer/about">About</a></li>
+                            <li role="menuitem"><a href="https://www.ebi.ac.uk/support/hmmer">Contact</a></li>
+                        <li class="extra-items-menu is-dropdown-submenu-parent opens-right" style="display: none;" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Also in this section"><a href="#">Also in this section</a><ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu"><li class="bug-fix-placeholder is-dropdown-submenu-parent is-submenu-item is-dropdown-submenu-item opens-right" style="display:none !important;" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="A workaround"><a href="#">A workaround</a> <ul class="menu submenu is-dropdown-submenu vertical" data-submenu="" aria-hidden="true" role="menu"> <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="#">for a bug where the dropdown menu fails sometimes unless there are two submenus in the submenu</a></li></ul>  </li></ul></li></ul>
+                    </nav>
+                    <!-- /local-nav -->
+
+                </div><!-- /masthead row-->
+
+            </header>
+
+        </div><!-- /local -->
+    </div> <!-- /data-sticky-container -->
+
+    <div id="content" role="main" class="row">
+
+        
+              <div class="row">
+
+              <div class="columns medium-12">
+                <div class="notify nojshide release-info important" style="opacity: 0;">&nbsp;</div>
+              </div>
+                    <!-- title  -->
+              <div class="columns small-6 medium-6">
+                                <h5>HMMSCAN Results</h5>                
+              </div>
+                    <!-- search again  -->
+                <div class="columns small-6 medium-6">
+                                            <div>
+                                <a href="https://www.ebi.ac.uk/Tools/hmmer/search/hmmscan" class="float-right button small">Search Again</a>
+                        </div>                </div>
+              </div><!-- /row -->
+
+            <div class="row">
+              <div class="columns medium-12">
+                                <div id="subnav">
+                    <!-- top tabs on result page - this is our interest -->
+                  
+                </div>
+                              </div>
+
+
+          </div><!-- /row -->
+
+
+            
+<div id="error">
+    </div>
+<div id="info">
+  </div>
+
+            <div class="content results">
+  
+
+
+
+<div class="summary_status">
+  <p class="right">
+  <span class="attention">24</span> out of <span class="bolder">24</span> searches completed.
+  </p>
+  <p>Your job has finished.</p>
+</div>
+
+<table class="resultTable" id="batch_sum">
+  <caption>Results Summary</caption>
+  <thead>
+    <tr>
+      <th rowspan="2">Sequence Number</th>
+      <th rowspan="2">Query Name</th>
+      <th rowspan="2">Hits Found</th>
+      <th rowspan="2">Status</th>
+      <th colspan="2">Top Hit</th>
+      <th rowspan="2">Details</th>
+    </tr>
+    <tr>
+      <th>Identifier</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="8"></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    
+    <tr class="">
+      <td>1</td>
+      <td>g1285.t1</td>
+      
+      <td>1</td>
+      
+      <td>DONE</td>
+      <td>
+        CBM_14
+      </td>
+      <td>
+        Chitin binding Peritrophin-A domain
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.1/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>2</td>
+      <td>g2203.t1</td>
+      
+      <td>1</td>
+      
+      <td>DONE</td>
+      <td>
+        Glyco_hydro_31
+      </td>
+      <td>
+        Glycosyl hydrolases family 31
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.2/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>3</td>
+      <td>g3428.t1</td>
+      
+      <td>0</td>
+      
+      <td>DONE</td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.3/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>4</td>
+      <td>g3679.t1</td>
+      
+      <td>1</td>
+      
+      <td>DONE</td>
+      <td>
+        Astacin
+      </td>
+      <td>
+        Astacin (Peptidase family M12A)
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.4/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>5</td>
+      <td>g4106.t1</td>
+      
+      <td>0</td>
+      
+      <td>DONE</td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.5/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>6</td>
+      <td>g4970.t1</td>
+      
+      <td>3</td>
+      
+      <td>DONE</td>
+      <td>
+        Trypsin
+      </td>
+      <td>
+        Trypsin
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.6/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>7</td>
+      <td>g5237.t1</td>
+      
+      <td>0</td>
+      
+      <td>DONE</td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.7/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>8</td>
+      <td>g5443.t1</td>
+      
+      <td>0</td>
+      
+      <td>DONE</td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.8/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>9</td>
+      <td>g5510.t1</td>
+      
+      <td>1</td>
+      
+      <td>DONE</td>
+      <td>
+        MARVEL
+      </td>
+      <td>
+        Membrane-associating domain
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.9/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>10</td>
+      <td>g5927.t1</td>
+      
+      <td>0</td>
+      
+      <td>DONE</td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.10/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>11</td>
+      <td>g7861.t1</td>
+      
+      <td>3</td>
+      
+      <td>DONE</td>
+      <td>
+        SNF2-rel_dom
+      </td>
+      <td>
+        SNF2-related domain
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.11/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>12</td>
+      <td>g8100.t1</td>
+      
+      <td>2</td>
+      
+      <td>DONE</td>
+      <td>
+        Inositol_P
+      </td>
+      <td>
+        Inositol monophosphatase family
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.12/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>13</td>
+      <td>g8312.t1</td>
+      
+      <td>1</td>
+      
+      <td>DONE</td>
+      <td>
+        Clathrin
+      </td>
+      <td>
+        Region in Clathrin and VPS
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.13/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>14</td>
+      <td>g10513.t1</td>
+      
+      <td>0</td>
+      
+      <td>DONE</td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.14/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>15</td>
+      <td>g10514.t1</td>
+      
+      <td>0</td>
+      
+      <td>DONE</td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.15/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>16</td>
+      <td>g11513.t1</td>
+      
+      <td>1</td>
+      
+      <td>DONE</td>
+      <td>
+        TRAPPC9-Trs120
+      </td>
+      <td>
+        Transport protein Trs120 or TRAPPC9, TRAPP II complex subunit
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.16/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>17</td>
+      <td>g11806.t1</td>
+      
+      <td>0</td>
+      
+      <td>DONE</td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.17/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>18</td>
+      <td>g11960.t1</td>
+      
+      <td>1</td>
+      
+      <td>DONE</td>
+      <td>
+        zf-C3HC4
+      </td>
+      <td>
+        Zinc finger, C3HC4 type (RING finger)
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.18/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>19</td>
+      <td>g12510.t1</td>
+      
+      <td>0</td>
+      
+      <td>DONE</td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.19/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>20</td>
+      <td>g13530.t1</td>
+      
+      <td>0</td>
+      
+      <td>DONE</td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.20/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>21</td>
+      <td>g14472.t1</td>
+      
+      <td>0</td>
+      
+      <td>DONE</td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.21/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>22</td>
+      <td>g15484.t1</td>
+      
+      <td>5</td>
+      
+      <td>DONE</td>
+      <td>
+        Vps51
+      </td>
+      <td>
+        Vps51/Vps67
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.22/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>23</td>
+      <td>g16318.t1</td>
+      
+      <td>0</td>
+      
+      <td>DONE</td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.23/score">show</a>
+        
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td>24</td>
+      <td>g16368.t1</td>
+      
+      <td>0</td>
+      
+      <td>DONE</td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+        <a href="https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E.24/score">show</a>
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+            </div>
+
+
+    </div><!-- /content -->
+<footer>
+  <!-- optional local footer -->
+  <div id="local-footer">
+    <div class="row">
+      <div class="column medium-12 content">
+        <p>
+          HmmerWeb version
+          <span id="hmmer-version" class="tooltip_item" data-hasqtip="0">
+            2.41.2
+          </span>
+        </p>
+        <p class="help">
+          server name: wp-p3s-b9<br>
+          <a href="https://www.ebi.ac.uk/Tools/hmmer/status/search_summary">search summary</a><br>
+          <a href="https://www.ebi.ac.uk/Tools/hmmer/status/search_history">search history</a>
+        </p>
+        <p class="release-info" title="estimated local date: 12/3/2028">Next release in more than a month</p>
+        <p>
+          Comments or questions about the site?
+          <a href="https://www.ebi.ac.uk/support/hmmer">
+            Click here to use our contact form
+          </a>
+        </p>
+        <h4 class="icon icon-socialmedia icon-s2" data-icon="T"></h4>
+        <a href="https://twitter.com/hmm3r" class="twitter-follow-button">
+          <span>Follow @hmm3r</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- / optional local footer -->
+  <div id="global-footer">
+    <!-- Footer will be automatically inserted by footer.js -->
+    <nav id="global-nav-expanded" class="row"><div class="columns small-6 medium-2 ">  <a href="https://www.ebi.ac.uk/" title="EMBL-EBI"><span class="ebi-logo"></span></a>  <ul>  </ul>  </div>   <div class="columns small-6 medium-2 ">  <h5 class="services"><a class="services-color" href="https://www.ebi.ac.uk/services">Services</a></h5>  <ul>  <li><a href="https://www.ebi.ac.uk/services/data-resources-and-tools">Data resources and tools</a></li>  <li><a href="https://www.ebi.ac.uk/submission/">Data submission</a></li>  <li><a href="https://www.ebi.ac.uk/support">Support and feedback</a></li>  <li class="last"><a href="https://www.ebi.ac.uk/licencing">Licensing</a></li>  </ul>  </div>   <div class="columns small-6 medium-2 ">  <h5 class="research"><a class="research-color" href="https://www.ebi.ac.uk/research">Research</a></h5>  <ul>  <li><a href="https://www.ebi.ac.uk/research/publications">Publications</a></li>  <li><a href="https://www.ebi.ac.uk/research/groups">Research groups</a></li>  <li class="last"><a href="https://www.ebi.ac.uk/research/postdocs">Postdocs</a> and <a href="https://www.ebi.ac.uk/research/eipp">PhDs</a></li>  </ul>  </div>   <div class="columns small-6 medium-2 ">  <h5 class="training"><a class="training-color" href="https://www.ebi.ac.uk/training">Training</a></h5>  <ul>  <li><a href="https://www.ebi.ac.uk/training/live-events">Live training</a></li>  <li><a href="https://www.ebi.ac.uk/training/on-demand">On-demand training</a></li>  <li><a href="https://www.ebi.ac.uk/training/trainer-support">Support for trainers</a></li>  <li><a href="https://www.ebi.ac.uk/training/contact-us">Contact organisers</a></li>  </ul>  </div>   <div class="columns small-6 medium-2 ">  <h5 class="industry"><a class="industry-color" href="https://www.ebi.ac.uk/industry">Industry</a></h5>  <ul>  <li><a href="https://www.ebi.ac.uk/industry/private/members-area/">Members Area</a></li>  <li class="last"><a href="https://www.ebi.ac.uk/industry/contact-us">Contact Industry team</a></li>  </ul>  </div>   <div class="columns small-6 medium-2 ">  <h5 class="about"><a class="ebi-color" href="https://www.ebi.ac.uk/about">About EMBL-EBI</a></h5>  <ul>  <li><a href="https://www.ebi.ac.uk/about/contact">Contact us</a>  </li><li><a href="https://www.ebi.ac.uk/about/events">Events</a></li>  <li><a href="https://www.ebi.ac.uk/about/jobs" title="Jobs, postdocs, PhDs...">Jobs</a></li>  <li class="first"><a href="https://www.ebi.ac.uk/about/news">News</a></li>  <li><a href="https://www.ebi.ac.uk/about/people">People and groups</a></li>  </ul>  </div></nav>
+    <section id="ebi-footer-meta" class="row"><div class="columns"><p class="address">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK. +44 (0)1223 49 44 44</p> <p class="legal">Copyright © EMBL 2022 | EMBL-EBI is <a href="http://www.embl.org/">part of the European Molecular Biology Laboratory</a> | <a href="https://www.ebi.ac.uk/about/terms-of-use">Terms of use</a><a class="readmore float-right" href="http://intranet.ebi.ac.uk/">Intranet</a></p></div></section>
+  </div>
+
+  <span style="display: none;" id="data-protection-message-configuration" data-service-id="hmmer"></span>
+</footer>
+
+
+<!-- local javascript files -->
+<script type="text/javascript" src="score_results_HMMER_files/vendor.min.js"></script>
+<script type="text/javascript" src="score_results_HMMER_files/main.min.js"></script>
+<script defer="defer" type="text/javascript" src="score_results_HMMER_files/release.min.js"></script>
+<script defer="defer" type="text/javascript" src="score_results_HMMER_files/textarea-sequence.min.js"></script>
+<script defer="defer" type="text/javascript" src="score_results_HMMER_files/textarea.min.js"></script>
+<script defer="defer" type="text/javascript" src="score_results_HMMER_files/results.min.js"></script>
+
+<script defer="defer" src="score_results_HMMER_files/foot.js"></script>
+<script defer="defer" src="score_results_HMMER_files/script_002.js"></script>
+
+<!-- The Foundation theme JavaScript -->
+<script src="score_results_HMMER_files/foundation.js"></script>
+<script src="score_results_HMMER_files/foundationExtendEBI.js"></script>
+<script type="text/JavaScript">$(document).foundation();</script>
+<script type="text/JavaScript">$(document).foundationExtendEBI();</script><style id="dynamic-stuck-height" type="text/css"> div#local-masthead.sticky.is-stuck{ margin-top: -268.133px !important;} </style>
+
+
+<script type="text/javascript">
+  $('#taxfilter_content').show();
+
+  $('document').timeout = 45 * 1000;
+
+  $(document).ready(function () {
+    var params = window.location.search;
+    var dataLoad = true;
+
+    $('.domGraphics').each(function() {
+      $(this).text('');
+      var id = '#' + $(this).attr('id');
+      var seq_id = id.replace('#dom_', 'seq_');
+      var pg = new __HmmerGlobal.PfamGraphic();
+      pg.setParent(id);
+      pg.setSequence(window[seq_id]);
+      pg.render();
+      var new_width = $(this).parent().width();
+      pg.resize(new_width);
+    });
+
+    if ($('#domGraph').length && typeof sequence !== 'undefined') {
+      var pg = new __HmmerGlobal.PfamGraphic('#domGraph', sequence);
+      pg.render();
+      var new_width = $('#domGraph').parent().width();
+      pg.resize(new_width);
+
+      $('#hmmscan tbody tr:not(".alignment")')
+        .bind('mouseover', function() {
+          var uniq = $(this).attr('data-uniq');
+          pg.highlight({uniq: uniq});
+        })
+        .bind('mouseout', function() {
+          var uniq = $(this).attr('data-uniq');
+          pg.highlight({uniq: uniq, status: 'off'});
+        });
+
+      
+      $('#domGraph').trigger('load_annotations');
+      
+    };
+
+    if (params.match(/range=\d+,\d+/) && !params.match(/l=1/)) {
+      dataLoad = false;
+    }
+
+    var url = '/results/F499EBEA-7C7A-11ED-A395-D30CB769042E/score';
+
+    if (
+      dataLoad &&
+      $('#barGraph').length &&
+      typeof __HmmerGlobal.hitGraphData !== 'undefined'
+    ) {
+      $('#barGraph').distGraph();
+    }
+
+    $('#hmmscan').simpleTable();
+    
+      $('#hmmscan').alignmentToggle();
+    
+    $('#hmmscan').sortable();
+    $('.meta').meta_toggle();
+    $('#isajax').attr('value',1);
+
+      $('.summary_status p:eq(1)').append(
+        '<img src="https://www.ebi.ac.uk/Tools/hmmer/static/images/spinner.gif" />'
+      );
+
+      var smartPoller = function(poller, wait) {
+        (function startPoller() {
+          setTimeout(function() {
+            poller.call(this, startPoller);
+          }, wait);
+          wait = wait * 1.1;
+        })();
+      };
+
+      smartPoller(function(retry) {
+        $.ajax({
+          url: 'https://www.ebi.ac.uk/Tools/hmmer/results/F499EBEA-7C7A-11ED-A395-D30CB769042E/summary',
+          dataType: 'json',
+          success: function(data) {
+            if (data) {
+              $('#batch_sum').batchUpdate(data, 'F499EBEA-7C7A-11ED-A395-D30CB769042E');
+              if (
+                !data.summary.sum.status ||
+                !data.summary.sum.status.match(/ERROR|DONE/)
+              ) {
+                retry();
+              } else {
+                $('.summary_status img').remove();
+                $('.content').append($('#next_iter_form').html());
+              }
+            } else {
+              retry();
+            }
+          },
+          error: function() {
+            $('#error').find('p').remove().end().show()
+              .append(
+                '<p>There was an error retrieving your results. Please refresh the page to try again.</p>'
+              );
+            $('.summary_status img').remove();
+          }
+        });
+      }, 1000);
+
+    
+
+    if (typeof uuid !== 'undefined') {
+      var page_num = null;
+      if (typeof page !== 'undefined') {
+        page_num = page;
+      }
+      if (typeof phmmerStatus !== 'undefined') {
+        $.loadPhmmer(
+          uuid, phmmerStatus, page_num
+          
+        );
+      }
+    }
+
+
+
+    $('.formatchoices').addClass('fchoice');
+
+    $('.fchoice div').not('.disabled').click(function(e){
+      e.preventDefault();
+      $('.fchoice div').removeClass('fselected');
+      $(this).addClass('fselected').children('input').attr('checked', true)
+      if ($('#job_details').length) {
+        $(this).parents('form').trigger('validate')
+          .children('.centered').hide();
+      }
+    });
+  });
+</script>
+
+
+
+
+<!--//ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.1/js/cookiebanner.js automatically inserted--><script type="text/javascript" src="score_results_HMMER_files/cookiebanner.js"></script><!--//ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.1/js/script.js automatically inserted--><script type="text/javascript" src="score_results_HMMER_files/script.js"></script><!--//www.ebi.ac.uk/web_guidelines/js/downtime.js?464197 automatically inserted--><script type="text/javascript" src="score_results_HMMER_files/downtime.js"></script><div id="data-protection-banner" class="data-protection-banner" style="position: fixed; background: rgb(17, 17, 17); width: 100%; padding: 0.75rem 1%; left: 0px; bottom: 0px; color: rgb(238, 238, 238); z-index: 10; display: block;"><div class="row"><div class="columns medium-8 large-9 white-color">This
+ website requires cookies, and the limited processing of your personal 
+data in order to function. By using the site you are agreeing to this as
+ outlined in our <a target="_blank" href="https://www.ebi.ac.uk/data-protection/privacy-notice/embl-ebi-public-website">Privacy Notice</a> and <a target="_blank" href="https://www.ebi.ac.uk/about/terms-of-use">Terms of Use</a>.</div><div class="columns medium-4 large-3 text-right white-color"><a id="data-protection-agree" class="">I agree, dismiss this banner</a></div></div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
