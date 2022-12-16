@@ -1,0 +1,35 @@
+protein_id	wolf_animals	wolf_plants	wolf_fungi	targetp_nonplants	targetp_plants
+g702.t1	extr: 29, plas: 2, lyso: 1	extr: 6, vacu: 5, golg: 2, E.R.: 1	extr: 26	SP	SP
+g1285.t1	extr: 25, plas: 5, mito: 1, lyso: 1	vacu: 5, chlo: 3, extr: 3, golg: 2, nucl: 1	extr: 24, golg: 2	SP	SP
+g2203.t1	plas: 29, nucl: 2, golg: 1	cyto: 5, nucl: 4, E.R.: 3, vacu: 2	plas: 9, cyto: 8.5, cyto_nucl: 5, mito: 4, extr: 2, pero: 1, E.R.: 1, golg: 1	OTHER	OTHER
+g3428.t1	mito: 18, cyto: 11, extr: 2, nucl: 1	chlo: 6, mito: 6, nucl: 1, cyto: 1	cyto: 12.5, cyto_nucl: 11, nucl: 8.5, mito: 5, pero: 1	OTHER	OTHER
+g3679.t1	extr: 26, mito: 2, lyso: 2, plas: 1, E.R.: 1	chlo: 6, nucl: 3, mito: 2, vacu: 2, extr: 1	extr: 26	SP	SP
+g4106.t1	E.R.: 14.5, E.R._golg: 9.5, extr: 7, golg: 3.5, lyso: 3, pero: 2, plas: 1, mito: 1	chlo: 6, E.R.: 3, plas: 2, pero: 2, vacu: 1	pero: 10, cyto: 5.5, E.R.: 5, cyto_nucl: 3.5, mito: 3, plas: 3	OTHER	SP
+g4970.t1	plas: 32	nucl: 4, cyto: 3, E.R.: 3, vacu: 2, mito: 1, plas: 1	plas: 16, cyto: 3, nucl: 2, mito: 2, pero: 2, golg: 1, vacu: 1	OTHER	OTHER
+g5237.t1	plas: 24, mito: 8	chlo: 5, golg: 4, nucl: 2, extr: 2, plas: 1	extr: 10, nucl: 4, plas: 4, mito: 3, cyto: 3, pero: 2, golg: 1	OTHER	OTHER
+g5443.t1	extr: 28, nucl: 3, cyto: 1	chlo: 9, nucl: 2, cyto: 1, extr: 1, E.R.: 1	extr: 17, nucl: 5, cyto: 2, mito: 1, E.R.: 1, vacu: 1	OTHER	OTHER
+g5467.t1	extr: 27, plas: 4, mito: 1	extr: 6, vacu: 5, chlo: 2, golg: 1	extr: 25	SP	SP
+g5502.t1	extr: 31, lyso: 1	chlo: 9, extr: 5	extr: 27	SP	SP
+g5503.t1	extr: 29, plas: 1, mito: 1, lyso: 1	chlo: 10, extr: 3, cyto: 1	extr: 19, mito: 4, golg: 2, pero: 1, E.R.: 1	SP	SP
+g5510.t1	plas: 23, mito: 7, E.R.: 1, golg: 1	chlo: 5, plas: 3.5, cyto_plas: 2.5, E.R.: 2, mito: 1, pero: 1, golg: 1	plas: 21, mito: 3, E.R.: 2, pero: 1	OTHER	OTHER
+g5616.t1	extr: 31, mito: 1	extr: 12, vacu: 2	extr: 25	SP	SP
+g5641.t1	extr: 31, lyso: 1	extr: 8, vacu: 4, golg: 2	extr: 25	SP	SP
+g5927.t1	nucl: 30.5, cyto_nucl: 16.5, cyto: 1.5	nucl: 14	nucl: 22.5, cyto_nucl: 14, cyto: 4.5	OTHER	OTHER
+g7861.t1	nucl: 16, cyto_nucl: 14, cyto: 8, plas: 5, pero: 1, cysk: 1, golg: 1	nucl: 4, vacu: 4, cyto: 3, E.R.: 2, chlo: 1	nucl: 11, plas: 9, cyto: 4, mito: 2, pero: 1	OTHER	OTHER
+g8100.t1	nucl: 16.5, cyto_nucl: 12.5, cyto: 7.5, plas: 5, extr: 2, E.R.: 1	nucl: 4, E.R.: 4, cyto: 2, mito: 2, vacu: 2	cyto: 11.5, cyto_nucl: 8.5, mito: 5, nucl: 4.5, pero: 2, plas: 1, E.R.: 1, golg: 1, vacu: 1	OTHER	OTHER
+g8312.t1	nucl: 15.5, cyto_nucl: 15.5, cyto: 12.5, mito: 2, plas: 1, golg: 1	nucl: 7, cyto: 5, chlo: 1, vacu: 1	nucl: 15.5, cyto_nucl: 12, cyto: 5.5, pero: 5, golg: 1	OTHER	OTHER
+g10513.t1	nucl: 20, cyto_nucl: 14.5, cyto: 7, extr: 3, E.R.: 1, golg: 1	nucl: 13, chlo: 1	nucl: 18.5, cyto_nucl: 15, cyto: 6.5, mito: 2	OTHER	OTHER
+g10514.t1	nucl: 19, cyto_nucl: 15, cyto: 9, extr: 3, mito: 1	nucl: 8, cyto: 5, plas: 1	nucl: 20.5, cyto_nucl: 14.5, cyto: 5.5, mito: 1	OTHER	OTHER
+g11320.t1	plas: 24.5, extr_plas: 16, extr: 6.5, lyso: 1	extr: 11, golg: 2, E.R.: 1	extr: 27	SP	SP
+g11513.t1	cyto: 17, cyto_nucl: 12.8333, cyto_mito: 9.83333, nucl: 7.5, E.R.: 3, mito: 1.5, plas: 1, pero: 1, golg: 1	nucl: 4, plas: 3, cyto: 2, E.R.: 2, chlo: 1, vacu: 1, golg: 1	cyto: 13, cyto_nucl: 9.5, mito: 6, nucl: 4, pero: 2, plas: 1, E.R.: 1	OTHER	OTHER
+g11806.t1	nucl: 18, cyto_nucl: 11.8333, mito: 5, extr: 4, cyto: 3.5, cyto_pero: 2.66667, cysk_plas: 1	nucl: 11.5, cyto_nucl: 6.5, plas: 1, extr: 1	nucl: 18, cyto_nucl: 14, cyto: 6, mito: 3	OTHER	OTHER
+g11960.t1	nucl: 32	nucl: 13.5, cyto_nucl: 7.5	nucl: 25, cyto_nucl: 15.5	OTHER	OTHER
+g12388.t1	extr: 25, plas: 4, mito: 2, lyso: 1	chlo: 10, vacu: 2, cyto: 1, mito: 1	extr: 20, mito: 3, E.R.: 2, cyto: 1, pero: 1	SP	SP
+g12510.t1	plas: 29, cyto: 3	plas: 5, vacu: 3, E.R.: 3, cyto: 2, golg: 1	mito: 13, plas: 8, cyto: 5, vacu: 1	OTHER	OTHER
+g12562.t1	extr: 30, lyso: 2	extr: 9, vacu: 3, golg: 2	extr: 25	SP	SP
+g13530.t1	extr: 13, nucl: 6.5, lyso: 5, cyto_nucl: 4.5, plas: 3, E.R.: 3, cyto: 1.5	nucl: 11, chlo: 1, cyto: 1, cysk: 1	extr: 24, nucl: 1, mito: 1, cyto: 1	SP	SP
+g14472.t1	nucl: 28, plas: 2, cyto: 1, cysk: 1	nucl: 14	nucl: 14, cyto_nucl: 11.5, mito: 5, cyto: 5, extr: 1, pero: 1, cysk: 1	OTHER	OTHER
+g15153.t1	extr: 32	extr: 11, vacu: 2, E.R.: 1	extr: 27	SP	SP
+g15484.t1	nucl: 17.5, cyto_nucl: 15.3333, cyto: 12, cyto_mito: 6.83333, plas: 1, golg: 1	nucl: 11, plas: 1, vacu: 1, golg: 1	nucl: 16.5, cyto_nucl: 12.5, cyto: 7.5, pero: 3	OTHER	OTHER
+g16318.t1	nucl: 20.5, cyto_nucl: 13, extr: 5, cyto: 4.5, E.R.: 1, golg: 1	nucl: 13, chlo: 1	nucl: 17, cyto_nucl: 14, cyto: 7, mito: 1, extr: 1, golg: 1	OTHER	OTHER
+g16368.t1	nucl: 20.5, cyto_nucl: 13, extr: 5, cyto: 4.5, E.R.: 1, golg: 1	nucl: 13, chlo: 1	nucl: 17.5, cyto_nucl: 13.5, cyto: 6.5, mito: 1, extr: 1, golg: 1	OTHER	OTHER
