@@ -13,3 +13,9 @@ raw_data/
 
 # Guides
 /*.pdf
+
+#Logs
+*.log
+
+#Temporary directories and files
+temp
